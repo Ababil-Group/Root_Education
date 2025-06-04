@@ -2,26 +2,27 @@
 
 import UniversityCard from "@/components/common/UniversityCard";
 import UniversitiesSkeletons from "@/components/skeletons/UniversitiesSkeletons";
-import { apiUrl } from "@/secrets";
+// import { apiUrl } from "@/secrets";
 import { University } from "@/types/university";
-import { useQuery } from "@tanstack/react-query";
-import axios from "axios";
-import { useSearchParams } from "next/navigation";
+import { dummyUniversities } from "@/services/Data";
+// import { useQuery } from "@tanstack/react-query";
+// import axios from "axios";
+// import { useSearchParams } from "next/navigation";
 
 const UniversityContainer = () => {
-  const searchParams = useSearchParams();
+  // const searchParams = useSearchParams();
+  const universities = dummyUniversities;
+  const isLoading = false;
 
-  const { data, isLoading } = useQuery({
-    queryKey: ["universities", searchParams.toString()], // Include params in queryKey
-    queryFn: async () => {
-      const paramsString = searchParams.toString();
-      const url = `${apiUrl}/all_university/${paramsString ? `?${paramsString}` : ""}`;
-      const response = await axios.get(url);
-      return response.data;
-    },
-  });
-
-  const universities = data?.results;
+  // const { data, isLoading } = useQuery({
+  //   queryKey: ["universities", searchParams.toString()], // Include params in queryKey
+  //   queryFn: async () => {
+  //     const paramsString = searchParams.toString();
+  //     const url = `${apiUrl}/all_university/${paramsString ? `?${paramsString}` : ""}`;
+  //     const response = await axios.get(url);
+  //     return response.data;
+  //   },
+  // });
 
   if (isLoading) return <UniversitiesSkeletons />;
 

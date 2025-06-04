@@ -3,7 +3,6 @@
 import Section from "@/components/common/Section";
 
 import UniversityContainer from "./UniversityContainer";
-import { University } from "@/types/university";
 import {
   Pagination,
   PaginationContent,
@@ -11,23 +10,42 @@ import {
   PaginationNext,
   PaginationPrevious,
 } from "@/components/ui/pagination";
+import { University } from "@/types/university";
 import { useRouter, useSearchParams } from "next/navigation";
 import Link from "next/link";
+
+type PaginatedUniversityData = {
+  universities: University[];
+  current_page: number;
+  total_pages: number;
+  next_page?: number;
+  previous_page?: number;
+  total_universities?: number;
+};
 
 const UniversitiesWeRepresent = ({
   universityData,
 }: {
-  universityData: {
-    total_universities: number;
-    current_page: number;
-    next_page: null | string | number;
-    previous_page: null | string | number;
-    total_pages: number;
-    results: University[];
-  };
+  universityData: University[];
 }) => {
-  const router = useRouter();
+  // Create pagination data from the array
+  const itemsPerPage = 6;
   const searchParams = useSearchParams();
+  const currentPage = Number(searchParams.get("page") || "1");
+
+  const paginatedData: PaginatedUniversityData = {
+    universities: universityData,
+    current_page: currentPage,
+    total_pages: Math.ceil(universityData.length / itemsPerPage),
+    next_page:
+      currentPage < Math.ceil(universityData.length / itemsPerPage)
+        ? currentPage + 1
+        : undefined,
+    previous_page: currentPage > 1 ? currentPage - 1 : undefined,
+    total_universities: universityData.length,
+  };
+  const router = useRouter();
+  // const searchParams = useSearchParams();
   const params = new URLSearchParams(searchParams);
 
   const handlePageChange = (page: string) => {
@@ -85,40 +103,40 @@ const UniversitiesWeRepresent = ({
       <div className="mt-10">
         <Pagination>
           <PaginationContent>
-            {universityData.current_page > 1 && (
+            {paginatedData.current_page > 1 && (
               <PaginationItem>
                 <PaginationPrevious
                   className="cursor-pointer"
                   onClick={() =>
                     handlePageChange(
-                      universityData.previous_page
-                        ? universityData.previous_page?.toString()
+                      paginatedData.previous_page
+                        ? paginatedData.previous_page.toString()
                         : "",
                     )
                   }
                 />
               </PaginationItem>
             )}
-            {Array.from({ length: universityData.total_pages }).map(
+            {Array.from({ length: paginatedData.total_pages }).map(
               (_, index) => (
                 <PaginationItem key={index}>
                   <Link
                     href={`/universities?page=${index + 1}`}
-                    className={`${(index + 1).toString() === (universityData.current_page || 1).toString() ? "bg-sidebar-accent" : ""} cursor-pointer px-[13px] py-2 hover:bg-sidebar-accent`}
+                    className={`${(index + 1).toString() === (paginatedData.current_page || 1).toString() ? "bg-sidebar-accent" : ""} cursor-pointer px-[13px] py-2 hover:bg-sidebar-accent`}
                   >
                     {index + 1}
                   </Link>
                 </PaginationItem>
               ),
             )}
-            {universityData.current_page < universityData.total_pages && (
+            {paginatedData.current_page < paginatedData.total_pages && (
               <PaginationItem>
                 <PaginationNext
                   className="cursor-pointer"
                   onClick={() =>
                     handlePageChange(
-                      universityData.next_page
-                        ? universityData.next_page?.toString()
+                      paginatedData.next_page
+                        ? paginatedData.next_page.toString()
                         : "",
                     )
                   }

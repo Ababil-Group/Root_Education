@@ -36,6 +36,19 @@ export const dummyCountries: Study_Country[] = [
     box1: {
       title: "World-Class Education",
       description:
+        "Study in Hungary for affordable tuition, quality education, vibrant culture, historic cities, and beautiful landscapes.",
+    },
+  },
+  {
+    id: 4,
+    country: "Lithuania",
+    slug: "hungary",
+    flag: "/images/lithuania_flag.png",
+    photo: "/images/lithuania.png",
+    route_slug: "Study in Lithuania",
+    box1: {
+      title: "World-Class Education",
+      description:
         "Study in Lithuania: affordable tuition, quality education, vibrant culture, historic charm, beautiful nature, welcoming environment.",
     },
   },
