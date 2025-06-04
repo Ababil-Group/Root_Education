@@ -1,16 +1,7 @@
 "use client";
 
 import Section from "@/components/common/Section";
-// import {
-//   Select,
-//   SelectContent,
-//   SelectGroup,
-//   SelectItem,
-//   SelectTrigger,
-//   SelectValue,
-// } from "@/components/ui/select";
 
-// import { useRouter, useSearchParams } from "next/navigation";
 import UniversityContainer from "./UniversityContainer";
 import { University } from "@/types/university";
 import {

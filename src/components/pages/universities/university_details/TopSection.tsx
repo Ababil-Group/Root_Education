@@ -156,7 +156,7 @@ const TopSection = ({ universityInfo }: { universityInfo: University }) => {
                 <div className="cursor-pointer">
                   <Image
                     className="cursor-pointer rounded-lg object-cover object-center xl:object-right"
-                    src={getThumbnailSrc(universityInfo.thumbnail)}
+                    src={getThumbnailSrc(universityInfo.photo)}
                     alt={universityInfo.name}
                     fill
                   />

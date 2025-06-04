@@ -22,7 +22,7 @@ const InstituteRepresent = ({
             >
               <Image
                 className="size-[70px] rounded-full border"
-                src={university.logo as string}
+                src={university.photo as string}
                 alt={university.name}
                 height={70}
                 width={70}

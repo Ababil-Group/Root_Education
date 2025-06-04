@@ -101,15 +101,6 @@ export type Study_Country = {
   photo?: File | null | FileList | string;
   route_slug: string;
   box1: Box1;
-  whystudy: Whystudy;
-  costofliving: Costofliving;
-  jobopportunity: Jobopportunity;
-  scholarship: Scholarship;
-  application_procedures: ApplicationProcedure;
-  admission_requirments: AdmissionRequirment;
-  visaprocedures: Visaprocedure;
-  cities: City[];
-  faq: Faq[];
 };
 
 export type Whystudylist = {
@@ -120,11 +111,6 @@ export type Whystudylist = {
 export type List = {
   title: string;
   content: string;
-};
-
-export type Fee = {
-  title: string;
-  range: string;
 };
 
 export type List2 = {
@@ -144,6 +130,20 @@ export type Applicationprocedureslist = {
   title: string;
   content: string;
 };
+export interface Fee {
+  program: string;
+  cost: string;
+}
+
+export interface LivingCost {
+  item: string;
+  cost: string;
+}
+
+export interface JobOpportunity {
+  title: string;
+  content: string;
+}
 
 export type List3 = {
   title: string;

@@ -1,3 +1,4 @@
+// import Testimonials from "@/components/common/Testimonials";
 import AboutUs from "@/components/pages/homepage/AboutUs";
 import Hero from "@/components/pages/homepage/Hero";
 import OurPartnersUniversity from "@/components/pages/homepage/OurPartnersUniversity";

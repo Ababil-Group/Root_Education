@@ -6,7 +6,7 @@ const UniversityLogoCard = ({ university }: { university: University }) => {
     <div className="relative size-[190px]">
       <Image
         className="rounded-full border object-cover object-center shadow"
-        src={university.logo as string}
+        src={university.photo as string}
         alt={university.name}
         fill
       />

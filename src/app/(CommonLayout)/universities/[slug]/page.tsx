@@ -29,7 +29,7 @@ const UniversityDetailsPage = async ({
     <main>
       <PageBanner PageName={formatCountryRoute(params.slug)} />
       <TopSection universityInfo={universityInfo} />
-      <TabSection universityInfo={universityInfo} />
+      <TabSection />
     </main>
   );
 };

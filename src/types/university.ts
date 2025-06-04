@@ -15,32 +15,6 @@ export type University = {
   };
 
   photo?: File | null | FileList | string;
-
-  logo?: File | null | FileList | string;
-
-  video?: File | null | FileList | string;
-
-  thumbnail?: File | null | FileList | string;
-
-  about_university: AboutUniversity[];
-
-  programs: {
-    undergraduate_programs: UndergraduateProgram[];
-    postgraduate_programs: PostgraduateProgram[];
-    doctoral_programs: DoctoralProgram[];
-  };
-
-  scholarship: {
-    short_description: string;
-    table: Table[];
-    notes: Note[];
-  };
-
-  application_guide: {
-    short_description: string;
-    guide_list: GuideList[];
-    bottom_description: string;
-  };
 };
 
 export type AboutUniversity = {

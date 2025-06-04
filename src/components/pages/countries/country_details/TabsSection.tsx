@@ -13,10 +13,73 @@ import { useState } from "react";
 import TuitionFees from "./TuitionFees";
 import LivingCosts from "./LivingCosts";
 import FadeInLeftWithSlowBounce from "@/animation_wrappers/FadeInLeftWithSlowBounce";
-import { Study_Country } from "@/types/country";
+
 import Image from "next/image";
 
-const TabsSection = ({ countryInfo }: { countryInfo: Study_Country }) => {
+const countryInfo = {
+  whystudy: {
+    short_breaf: "Romania offers quality education at affordable costs.",
+    whystudylist: [
+      {
+        heading: "Affordable Tuition",
+        content:
+          "Romania has lower tuition fees compared to other EU countries.",
+      },
+      {
+        heading: "Multicultural Environment",
+        content: "Students from around the world come to study here.",
+      },
+    ],
+  },
+  costofliving: {
+    short_breaf: "Cost of living in Romania is budget-friendly for students.",
+    fees: [
+      { program: "Bachelor", cost: "€2000 - €5000/year" },
+      { program: "Master", cost: "€2500 - €6000/year" },
+    ],
+    list: [
+      {
+        title: "Accommodation",
+        content: "Students can find affordable accommodation.",
+      },
+      {
+        title: "Food",
+        content: "Students can find affordable food options.",
+      },
+      {
+        title: "Transportation",
+        content: "Students can find affordable transportation options.",
+      },
+    ],
+  },
+  jobopportunity: {
+    short_breaf: "Students are allowed to work part-time up to 20 hours/week.",
+    list: [
+      {
+        title: "Part-time Jobs",
+        content: "Available in hospitality and services.",
+      },
+      {
+        title: "Internships",
+        content: "Offered by universities and companies.",
+      },
+    ],
+  },
+  scholarship: {
+    short_breaf: "Romania offers scholarships based on merit and need.",
+    scholarshiplist: [
+      {
+        name: "Romanian Government Scholarship",
+        criteria: "Non-EU students with good academic record",
+        coverage: "Full tuition, accommodation, stipend",
+        deadline: "March 1",
+        process: "Apply through Ministry of Foreign Affairs",
+      },
+    ],
+  },
+};
+
+const TabsSection = () => {
   const [activeTab, setActiveTab] = useState("tab1");
 
   return (
@@ -106,7 +169,12 @@ const TabsSection = ({ countryInfo }: { countryInfo: Study_Country }) => {
                   </p>
 
                   <div className="mt-10 flex flex-wrap items-center justify-center gap-x-6 gap-y-10">
-                    {(countryInfo.jobopportunity.list as { title: string; content: string }[]).map((list, index) => (
+                    {(
+                      countryInfo.jobopportunity.list as {
+                        title: string;
+                        content: string;
+                      }[]
+                    ).map((list, index) => (
                       <FadeInLeftWithSlowBounce
                         className="min-h-[240px] max-w-[450px] space-y-3 rounded-lg border border-l-8 border-r-8 border-l-primary border-r-primary p-5 shadow-md"
                         key={index}
@@ -158,29 +226,33 @@ const TabsSection = ({ countryInfo }: { countryInfo: Study_Country }) => {
                         </TableRow>
                       </TableHeader>
                       <TableBody>
-                        {Array.isArray(countryInfo.scholarship.scholarshiplist) &&
-                          countryInfo.scholarship.scholarshiplist.map((list) => (
-                            <TableRow
-                              className="text-sm font-medium"
-                              key={list.name}
-                            >
-                              <TableCell className="border">
-                                {list.name}
-                              </TableCell>
-                              <TableCell className="border">
-                                {list.criteria}
-                              </TableCell>
-                              <TableCell className="border">
-                                {list.coverage}
-                              </TableCell>
-                              <TableCell className="border">
-                                {list.deadline}
-                              </TableCell>
-                              <TableCell className="border">
-                                {list.process}
-                              </TableCell>
-                            </TableRow>
-                          ))}
+                        {Array.isArray(
+                          countryInfo.scholarship.scholarshiplist,
+                        ) &&
+                          countryInfo.scholarship.scholarshiplist.map(
+                            (list) => (
+                              <TableRow
+                                className="text-sm font-medium"
+                                key={list.name}
+                              >
+                                <TableCell className="border">
+                                  {list.name}
+                                </TableCell>
+                                <TableCell className="border">
+                                  {list.criteria}
+                                </TableCell>
+                                <TableCell className="border">
+                                  {list.coverage}
+                                </TableCell>
+                                <TableCell className="border">
+                                  {list.deadline}
+                                </TableCell>
+                                <TableCell className="border">
+                                  {list.process}
+                                </TableCell>
+                              </TableRow>
+                            ),
+                          )}
                       </TableBody>
                     </Table>
                   </div>
@@ -195,15 +267,14 @@ const TabsSection = ({ countryInfo }: { countryInfo: Study_Country }) => {
           <div className="space-y-5">
             <h3 className="text-2xl font-semibold">Why Study in Romania</h3>
             <p className="text-sm font-medium">
-              {countryInfo.whystudy.short_breaf}
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nostrum,
+              reiciendis.
             </p>
             <ol className="list-decimal space-y-3 pl-4 text-sm font-medium">
-              {Array.isArray(countryInfo.whystudy.whystudylist) &&
-                countryInfo.whystudy.whystudylist.map((list) => (
-                  <li key={list.title}>
-                    <strong>{list.title}:</strong> {list.content}
-                  </li>
-                ))}
+              <li>
+                <strong>Lorem ipsum:</strong> Lorem ipsum dolor sit amet
+                consectetur adipisicing elit. Quaerat, iure!
+              </li>
             </ol>
             <p className="text-sm font-medium">
               These factors make Romania an appealing destination for
@@ -235,7 +306,12 @@ const TabsSection = ({ countryInfo }: { countryInfo: Study_Country }) => {
               </p>
 
               <div className="mt-10 flex flex-wrap items-center justify-center gap-x-6 gap-y-10">
-                {(countryInfo.jobopportunity.list as { title: string; content: string }[]).map((jobopportunity) => (
+                {(
+                  countryInfo.jobopportunity.list as {
+                    title: string;
+                    content: string;
+                  }[]
+                ).map((jobopportunity) => (
                   <FadeInLeftWithSlowBounce
                     className="min-h-[240px] max-w-[450px] space-y-3 rounded-lg border border-l-8 border-r-8 border-l-primary border-r-primary p-5 shadow-md"
                     key={jobopportunity.title}
@@ -310,7 +386,9 @@ const TabsSection = ({ countryInfo }: { countryInfo: Study_Country }) => {
                           <TableCell className="border bg-primary text-white">
                             Application Process
                           </TableCell>
-                          <TableCell className="border">{list.process}</TableCell>
+                          <TableCell className="border">
+                            {list.process}
+                          </TableCell>
                         </TableRow>
                       </TableBody>
                     </Table>

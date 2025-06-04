@@ -1,4 +1,4 @@
-import { Study_Country } from "@/types/country";
+// import { Study_Country } from "@/types/country";
 import AdmissionRequirements from "./AdmissionRequirements";
 import ApplicationProcedures from "./ApplicationProcedures";
 import InfoAccordion from "./InfoAccordion";
@@ -11,7 +11,7 @@ import {
   TableRow,
 } from "@/components/ui/table";
 
-const AccordionSection = ({ countryInfo }: { countryInfo: Study_Country }) => {
+const AccordionSection = () => {
   return (
     <section className="py-[50px]">
       <div className="container">
@@ -20,8 +20,8 @@ const AccordionSection = ({ countryInfo }: { countryInfo: Study_Country }) => {
             title="Application Procedures"
             content={
               <>
-                <p>{countryInfo.application_procedures.short_breaf}</p>
-                <ApplicationProcedures countryInfo={countryInfo} />
+                <p>lorem</p>
+                <ApplicationProcedures />
               </>
             }
           />
@@ -29,8 +29,8 @@ const AccordionSection = ({ countryInfo }: { countryInfo: Study_Country }) => {
             title="Admission Requirements"
             content={
               <>
-                <p>{countryInfo.admission_requirments.short_breaf}</p>
-                <AdmissionRequirements countryInfo={countryInfo} />
+                <p>lorem</p>
+                <AdmissionRequirements />
               </>
             }
           />
@@ -58,19 +58,10 @@ const AccordionSection = ({ countryInfo }: { countryInfo: Study_Country }) => {
                       </TableRow>
                     </TableHeader>
                     <TableBody>
-                      {countryInfo.visaprocedures.steps.map((procedure) => (
-                        <TableRow
-                          className="text-sm font-medium"
-                          key={procedure}
-                        >
-                          <TableCell className="border px-5">
-                            {procedure}
-                          </TableCell>
-                          <TableCell className="border px-5">
-                            {procedure}
-                          </TableCell>
-                        </TableRow>
-                      ))}
+                      <TableRow className="text-sm font-medium">
+                        <TableCell className="border px-5">Procedure</TableCell>
+                        <TableCell className="border px-5"></TableCell>
+                      </TableRow>
                     </TableBody>
                   </Table>
                 </div>

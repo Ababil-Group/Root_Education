@@ -13,19 +13,19 @@ const TuitionFees = ({ tuitionFees }: { tuitionFees: Fee[] }) => {
         {tuitionFees.map((tuitionFee) => (
           <FadeInLeftWithSlowBounce
             className="flex items-center justify-start gap-x-3 rounded-lg border border-b-8 border-b-primary p-4"
-            key={tuitionFee.title}
+            key={tuitionFee.program}
           >
             <div>
               <Image
                 src="/icons/fee.svg"
                 height={60}
                 width={60}
-                alt={tuitionFee.title}
+                alt={tuitionFee.program}
               />
             </div>
             <div className="space-y-1">
-              <h5 className="text-xl font-semibold">{tuitionFee.title}</h5>
-              <p className="text-sm font-medium">{tuitionFee.range}</p>
+              <h5 className="text-xl font-semibold">{tuitionFee.program}</h5>
+              <p className="text-sm font-medium">{tuitionFee.cost}</p>
             </div>
           </FadeInLeftWithSlowBounce>
         ))}

@@ -17,46 +17,6 @@ const dummyUniversities: University[] = [
       launched: 1636,
     },
     photo: "/images/media/university_photos/1-40.jpg",
-    logo: "/images/media/university_logos/aas_logo.png",
-    video: "/videos/harvard.mp4",
-    thumbnail: "/images/media/university_thumbnails/1-40.jpg",
-    about_university: [
-      {
-        title: "History",
-        description: "Founded in 1636, Harvard is the oldest U.S. university.",
-      },
-    ],
-    programs: {
-      undergraduate_programs: [{ name: "Computer Science" }],
-      postgraduate_programs: [{ name: "Business Administration" }],
-      doctoral_programs: [{ name: "Law" }],
-    },
-    scholarship: {
-      short_description: "Multiple scholarships for international students.",
-      table: [
-        {
-          scholarship_name: "Harvard Financial Aid",
-          amount: "$15,000 - $50,000",
-          eligibility_criteria: "Based on need and merit",
-          provider: "Harvard University",
-        },
-      ],
-      notes: [{ title: "Apply early for best chances" }],
-    },
-    application_guide: {
-      short_description: "Step-by-step application instructions.",
-      guide_list: [
-        {
-          title: "Submit Application",
-          description: "Apply online via portal.",
-        },
-        {
-          title: "Provide Documents",
-          description: "Transcript, SOP, LORs, etc.",
-        },
-      ],
-      bottom_description: "Ensure you meet deadlines and eligibility.",
-    },
   },
   // Add more dummy entries
 ];

@@ -43,9 +43,9 @@ const CountryDetailsPage = async ({ params }: TCountryDetailsPageProps) => {
 
       <TopSection countryInfo={countryInfo} />
 
-      <TabsSection countryInfo={countryInfo} />
+      <TabsSection />
 
-      <AccordionSection countryInfo={countryInfo} />
+      <AccordionSection />
 
       <BestCities countryInfo={countryInfo} />
 
@@ -53,7 +53,7 @@ const CountryDetailsPage = async ({ params }: TCountryDetailsPageProps) => {
         <InstituteRepresent partnerUniversities={partnerUniversities} />
       )}
 
-      <FAQ countryInfo={countryInfo} />
+      <FAQ />
     </main>
   );
 };

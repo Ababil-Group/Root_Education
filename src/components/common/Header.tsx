@@ -225,7 +225,7 @@ const Header = () => {
                                 >
                                   <Image
                                     className="size-[30px] rounded-full border"
-                                    src={university.logo as string}
+                                    src={university.photo as string}
                                     alt={university.short_info.country}
                                     height={30}
                                     width={30}
