@@ -1,4 +1,5 @@
 import { Study_Country } from "@/types/country";
+
 export const dummyCountries: Study_Country[] = [
   {
     id: 1,

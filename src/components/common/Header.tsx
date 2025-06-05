@@ -25,9 +25,10 @@ import {
   IoIosArrowForward,
   IoMdArrowDropright,
 } from "react-icons/io";
-import { useQuery } from "@tanstack/react-query";
-import { apiUrl } from "@/secrets";
-import axios from "axios";
+// import { useQuery } from "@tanstack/react-query";
+// import { apiUrl } from "@/secrets";
+// import axios from "axios";
+import { dummyCountries, dummyUniversities } from "@/services/Data";
 import { Study_Country } from "@/types/country";
 import { University } from "@/types/university";
 
@@ -39,19 +40,20 @@ const Header = () => {
   const [isCountriesOpen, setIsCountriesOpen] = useState(false);
   const [isUniversitiesOpen, setIsUniversitiesOpen] = useState(false);
 
-  const { isLoading: countryLoading, data: countryData } = useQuery({
-    queryKey: ["countries"],
-    queryFn: async () => await axios.get(`${apiUrl}/study_country/`),
-  });
+  // const { isLoading: countryLoading, data: countryData } = useQuery({
+  //   queryKey: ["countries"],
+  //   queryFn: async () => await axios.get(`${apiUrl}/study_country/`),
+  // });
 
-  const countries = countryData?.data;
+  // const countries = countryData?.data;
 
-  const { isLoading: UniversityLoading, data: universityData } = useQuery({
-    queryKey: ["universities"],
-    queryFn: async () => await axios.get(`${apiUrl}/all_university/?limit=all`),
-  });
+  // const { isLoading: UniversityLoading, data: universityData } = useQuery({
+  //   queryKey: ["universities"],
+  //   queryFn: async () => await axios.get(`${apiUrl}/all_university/?limit=all`),
+  // });
 
-  const universities = universityData?.data.results;
+  const universities = dummyUniversities as University[];
+  const countries = dummyCountries as Study_Country[];
 
   return (
     <header className="sticky top-0 z-[10000] bg-white py-3 shadow">
@@ -158,7 +160,7 @@ const Header = () => {
                     </CollapsibleContent>
                   </Collapsible>
                 </li>
-
+                {/* 
                 <li>
                   <Collapsible
                     open={isCountriesOpen}
@@ -174,7 +176,7 @@ const Header = () => {
                     </CollapsibleTrigger>
                     <CollapsibleContent>
                       <ul className="space-y-1 py-3 pl-2">
-                        {countryLoading
+                        {!countries
                           ? "Loading..."
                           : countries?.map((country: Study_Country) => (
                               <li key={country.id}>
@@ -198,8 +200,109 @@ const Header = () => {
                       </ul>
                     </CollapsibleContent>
                   </Collapsible>
+                </li> */}
+                <li>
+                  <Collapsible
+                    open={isCountriesOpen}
+                    onOpenChange={setIsCountriesOpen}
+                  >
+                    <CollapsibleTrigger className="flex w-full items-center justify-between rounded-lg border px-2 py-2 text-start">
+                      Countries{" "}
+                      {isCountriesOpen ? (
+                        <IoIosArrowForward />
+                      ) : (
+                        <IoIosArrowDown />
+                      )}
+                    </CollapsibleTrigger>
+                    <CollapsibleContent>
+                      <ul className="space-y-1 py-3  pl-2">
+                        {!countries
+                          ? "Loading..."
+                          : countries?.map((country: Study_Country) => (
+                              <li key={country.id}>
+                                <Link
+                                  className="group relative flex items-center justify-start gap-2 rounded-lg p-1 hover:bg-sidebar-accent"
+                                  href={`/countries/${country.route_slug}`}
+                                  onClick={closeSheet}
+                                >
+                                  {/* Flag + Name */}
+                                  <Image
+                                    className="size-[30px] rounded-full border"
+                                    src={country.flag as string}
+                                    alt={country.country}
+                                    height={30}
+                                    width={30}
+                                  />
+                                  <span className="font-medium">
+                                    Study in {country.country}
+                                  </span>
+
+                                  {/* Hover Tooltip (Description) */}
+                                  <div className="absolute left-full top-0 z-50 ml-2 hidden w-[250px] rounded-md bg-white p-3 shadow-lg group-hover:block">
+                                    <div className="flex items-center gap-2">
+                                      <Image
+                                        src={country.flag as string}
+                                        alt={country.country}
+                                        width={20}
+                                        height={20}
+                                        className="rounded-full border"
+                                      />
+                                      <h4 className="font-bold">
+                                        {country.country}
+                                      </h4>
+                                    </div>
+                                    <p className="mt-2 text-sm text-gray-600">
+                                      {country.box1.description}
+                                    </p>
+                                  </div>
+                                </Link>
+                              </li>
+                            ))}
+                      </ul>
+                    </CollapsibleContent>
+                  </Collapsible>
                 </li>
 
+                {/* <li>
+                  <Collapsible
+                    open={isUniversitiesOpen}
+                    onOpenChange={setIsUniversitiesOpen}
+                  >
+                    <CollapsibleTrigger className="flex w-full items-center justify-between rounded-lg border px-2 py-2 text-start">
+                      Universities{" "}
+                      {isUniversitiesOpen ? (
+                        <IoIosArrowForward />
+                      ) : (
+                        <IoIosArrowDown />
+                      )}
+                    </CollapsibleTrigger>
+                    <CollapsibleContent>
+                      <ul className="space-y-1 py-3 pl-2">
+                        {!universities
+                          ? "Loading..."
+                          : universities?.map((university: University) => (
+                              <li key={university.id}>
+                                <Link
+                                  className="flex items-center justify-start gap-2 rounded-lg p-1 hover:bg-sidebar-accent"
+                                  href={`/countries/${university.name}`}
+                                >
+                                  <Image
+                                    className="size-[30px] rounded-full border"
+                                    src={university.photo as string}
+                                    alt={university.short_info.country}
+                                    height={30}
+                                    width={30}
+                                  />
+                                  <span className="font-medium">
+                                    {university.name}
+                                  </span>
+                                </Link>
+                              </li>
+                            ))}
+                      </ul>
+                    </CollapsibleContent>
+                  </Collapsible>
+                </li> */}
                 <li>
                   <Collapsible
                     open={isUniversitiesOpen}
@@ -215,24 +318,60 @@ const Header = () => {
                     </CollapsibleTrigger>
                     <CollapsibleContent>
                       <ul className="space-y-1 py-3 pl-2">
-                        {UniversityLoading
+                        {!universities
                           ? "Loading..."
                           : universities?.map((university: University) => (
                               <li key={university.id}>
                                 <Link
-                                  className="flex items-center justify-start gap-2 rounded-lg p-1 hover:bg-sidebar-accent"
-                                  href={`/countries/${university.slug}`}
+                                  className="group relative flex items-center justify-start gap-2 rounded-lg p-1 hover:bg-sidebar-accent"
+                                  href={`/universities/${university.slug}`} // Update route as needed
+                                  onClick={closeSheet}
                                 >
+                                  {/* University Photo + Name */}
                                   <Image
                                     className="size-[30px] rounded-full border"
                                     src={university.photo as string}
-                                    alt={university.short_info.country}
+                                    alt={university.name}
                                     height={30}
                                     width={30}
                                   />
                                   <span className="font-medium">
                                     {university.name}
                                   </span>
+
+                                  {/* Hover Tooltip (Short Info) */}
+                                  <div className="absolute left-full top-0 z-50 ml-2 hidden w-[300px] rounded-md bg-white p-3 shadow-lg group-hover:block">
+                                    <div className="flex items-center gap-3">
+                                      <Image
+                                        src={university.photo as string}
+                                        alt={university.name}
+                                        width={50}
+                                        height={50}
+                                        className="rounded-md border"
+                                      />
+                                      <div>
+                                        <h4 className="font-bold">
+                                          {university.name}
+                                        </h4>
+                                        <p className="text-sm text-gray-500">
+                                          {university.short_info.country}
+                                        </p>
+                                      </div>
+                                    </div>
+                                    <p className="mt-2 line-clamp-3 text-sm text-gray-600">
+                                      {university.description}
+                                    </p>
+                                    <div className="mt-2 grid grid-cols-2 gap-2 text-xs">
+                                      <span>
+                                        <strong>Type:</strong>{" "}
+                                        {university.short_info.university_type}
+                                      </span>
+                                      <span>
+                                        <strong>Students:</strong>{" "}
+                                        {university.short_info.total_students}
+                                      </span>
+                                    </div>
+                                  </div>
                                 </Link>
                               </li>
                             ))}
