@@ -2,7 +2,8 @@ import PageBanner from "@/components/common/PageBanner";
 import TabSection from "@/components/pages/universities/university_details/TabsSection";
 import TopSection from "@/components/pages/universities/university_details/TopSection";
 import { formatCountryRoute } from "@/lib/utils";
-import { getUniversityBySlug } from "@/services/getUniversityBySlug";
+// import { getUniversityBySlug } from "@/services/getUniversityBySlug";
+import { universityInfo } from "@/services/Data";
 
 type TUniversityDetailsPageProps = {
   params: { slug: string };
@@ -23,7 +24,7 @@ const UniversityDetailsPage = async ({
 }: TUniversityDetailsPageProps) => {
   const { slug } = params;
 
-  const universityInfo = await getUniversityBySlug(slug);
+  // const universityInfo = await getUniversityBySlug(slug);
 
   return (
     <main>
