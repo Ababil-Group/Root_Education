@@ -20,7 +20,12 @@ const AccordionSection = () => {
             title="Application Procedures"
             content={
               <>
-                <p>lorem</p>
+                <p className="text-[20px] font-light leading-8 text-black">
+                  Applying to study in Romania involves several key steps,
+                  including choosing a program, preparing documents, and meeting
+                  specific requirements. Here&apos;s a general overview of the
+                  application process:
+                </p>
                 <ApplicationProcedures />
               </>
             }
@@ -29,7 +34,13 @@ const AccordionSection = () => {
             title="Admission Requirements"
             content={
               <>
-                <p>lorem</p>
+                <p className="text-[20px] font-light leading-8 text-black">
+                  Admission requirements for international students wishing to
+                  study in Romania can vary depending on the level of study
+                  (undergraduate, master&apos;s, or Ph.D.), the university, and
+                  the chosen program. However, the general admission
+                  requirements typically include the following:
+                </p>
                 <AdmissionRequirements />
               </>
             }
@@ -59,8 +70,83 @@ const AccordionSection = () => {
                     </TableHeader>
                     <TableBody>
                       <TableRow className="text-sm font-medium">
-                        <TableCell className="border px-5">Procedure</TableCell>
-                        <TableCell className="border px-5"></TableCell>
+                        <TableCell className="border px-5">Visa Type</TableCell>
+                        <TableCell className="border px-5">
+                          <ul className="list-disc space-y-2 pl-5">
+                            <li>
+                              Short-Term Study Visa (Type C/SD): For courses
+                              under 90 days.
+                            </li>
+                            <li>
+                              Long-Term Study Visa(Type D/SD): For programs over
+                              90 days.
+                            </li>
+                          </ul>
+                        </TableCell>
+                      </TableRow>
+                      <TableRow className="bg-[#F6F6F6] px-5 text-sm font-medium">
+                        <TableCell className="border px-5">
+                          Required Documents
+                        </TableCell>
+                        <TableCell className="border px-5">
+                          <ul className="list-disc space-y-2 pl-5">
+                            <li>Acceptance letter</li>
+                            <li>Completed visa application form</li>
+                            <li>
+                              {" "}
+                              Valid passport (at least 6 months beyond intended
+                              stay).
+                            </li>
+                            <li>Proof of tuition payment</li>
+                            <li>
+                              Proof of financial means (approx. €2,000 per
+                              year).
+                            </li>
+                            <li>Valid health insurance.</li>
+                            <li> Proof of accommodation in Romania.</li>
+                            <li> Criminal record certificate</li>
+                            <li>Two passport-sized photos</li>
+                            <li>Proof of visa fee payment.</li>
+                          </ul>
+                        </TableCell>
+                      </TableRow>
+                      <TableRow className="text-sm font-medium">
+                        <TableCell className="border px-5">Visa Fees</TableCell>
+                        <TableCell className="border px-5">
+                          <ul className="list-disc space-y-2 pl-5">
+                            <li>Short-Term Visa (Type C/SD): Approx. €60.</li>
+                            <li>Long-Term Visa (Type D/SD): Approx. €120.</li>
+                          </ul>
+                        </TableCell>
+                      </TableRow>
+                      <TableRow className="bg-[#F6F6F6] px-5 text-sm font-medium">
+                        <TableCell className="border px-5">
+                          Application Process
+                        </TableCell>
+                        <TableCell className="border px-5">
+                          <ul className="list-disc space-y-2 pl-5">
+                            <li>
+                              Apply for a residence permit within 90 days of
+                              arrival in Romania.
+                            </li>
+                            <li>Attend an interview (if required).</li>
+                            <li>Processing time: 10-60 days.</li>
+                          </ul>
+                        </TableCell>
+                      </TableRow>
+                      <TableRow className="text-sm font-medium">
+                        <TableCell className="border px-5">
+                          Residence Permit
+                        </TableCell>
+                        <TableCell className="border px-5">
+                          <ul className="list-disc space-y-2 pl-5">
+                            <li>
+                              Apply within 90 days of arrival for a long-term
+                              visa.
+                            </li>
+                            <li>Permit fee: ~€120.</li>
+                          </ul>
+                        </TableCell>
                       </TableRow>
                     </TableBody>
                   </Table>
