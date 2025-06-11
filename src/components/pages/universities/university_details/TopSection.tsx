@@ -3,11 +3,94 @@ import FadeInRightWithSlowBounce from "@/animation_wrappers/FadeInRightWithSlowB
 import Image from "next/image";
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 import { formatIndianNumber, getYearFromDate } from "@/lib/utils";
-import { University } from "@/types/university";
+// import { University } from "@/types/university";
 import { Button } from "@/components/ui/Button";
 import { IoPlayCircle } from "react-icons/io5";
+import { UniversityInfo } from "@/types/university";
 
-const TopSection = ({ universityInfo }: { universityInfo: University }) => {
+
+const universityInfo : UniversityInfo = {
+  name: "University of Delhi",
+  image: "/images/universities/university-of-delhi.jpg",
+  thumbnail: "/images/universities/university-of-delhi.jpg",
+  short_info: {
+    country: "India",
+    university_type: "Public",
+    total_students: 500000,
+    launched: 1922
+  },
+  about_university: [
+    {
+      title: "About",
+      description:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, officia. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, officia.",
+    },
+    {
+      title: "Vision",
+      description:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, officia. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, officia.",
+    },
+    {
+      title: "Mission",
+      description:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, officia. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, officia.",
+    }
+  ],
+  programs: {
+    undergraduate_programs: [
+      {
+        name: "Bachelor of Arts (B.A.)",
+        description:
+          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, officia. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, officia.",
+      },
+      {
+        name: "Bachelor of Commerce (B.Com.)",
+        description:
+          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, officia. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, officia.",
+      },
+      {
+        name: "Bachelor of Science (B.Sc.)",
+        description:
+          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, officia. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, officia.",
+      },
+    ],
+    postgraduate_programs: [],
+    doctoral_programs: [],
+  },
+  scholarship: {
+    short_description: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+    table: [],
+    notes: []
+  },
+  application_guide: {
+    short_description: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+    guide_list: [],
+    bottom_description: "Lorem ipsum dolor sit amet consectetur adipisicing elit."
+  },
+  admission: [
+    {
+      title: "Eligibility Criteria",
+      description:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, officia. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, officia.",
+    },
+    {
+      title: "Admission Process",
+      description:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, officia. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, officia.",
+    },
+    {
+      title: "Fee Structure",
+      description:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, officia. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, officia.",
+    },
+    {
+      title: "Scholarships",
+      description:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, officia. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, officia.",
+    },
+  ]
+}
+const TopSection = () => {
   // Thumbnail processing
   const getThumbnailSrc = (
     thumbnail: string | File | FileList | null | undefined,
@@ -26,10 +109,11 @@ const TopSection = ({ universityInfo }: { universityInfo: University }) => {
         <div className="flex flex-col items-center justify-between gap-x-20 gap-y-10 rounded-xl border px-8 py-8 shadow-sm lg:flex-row">
           <FadeInLeftWithSlowBounce className="basis-full space-y-5 xl:basis-1/2">
             <h2 className="text-center text-4xl font-semibold lg:text-left">
-              {universityInfo.name}, {universityInfo.short_info.country}
+              {universityInfo.about_university[0].title},{" "}
+              {universityInfo.about_university[1].title}
             </h2>
             <p className="text-center text-sm font-medium lg:text-left">
-              {universityInfo.description}
+              {universityInfo.programs.undergraduate_programs[0].name}
             </p>
             <div className="flex gap-x-4">
               <div className="space-y-2">

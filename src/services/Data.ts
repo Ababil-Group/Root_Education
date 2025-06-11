@@ -141,3 +141,63 @@ export const dummyUniversities = [
     photo: "/images/media/university_photos/UnivesityLatvia.png",
   },
 ];
+export const universityInfo = {
+  about_university: [
+    {
+      title: "Overview",
+      description:
+        "This university is one of the top institutions in Europe...",
+    },
+    {
+      title: "History",
+      description: "Founded in 1900, it has a long tradition of excellence.",
+    },
+  ],
+  programs: {
+    undergraduate_programs: [
+      { name: "Computer Science" },
+      { name: "Business Administration" },
+    ],
+    postgraduate_programs: [{ name: "Data Science" }, { name: "MBA" }],
+    doctoral_programs: [{ name: "PhD in Artificial Intelligence" }],
+  },
+  scholarship: {
+    short_description: "The university offers a wide range of scholarships.",
+    table: [
+      {
+        scholarship_name: "Merit-Based Scholarship",
+        amount: "$5,000",
+        eligibility_criteria: "Top 10% academic performance",
+        provider: "University Trust Fund",
+      },
+      {
+        scholarship_name: "Need-Based Grant",
+        amount: "$3,000",
+        eligibility_criteria: "Proven financial need",
+        provider: "Government",
+      },
+    ],
+    notes: [
+      { title: "Scholarships are renewable each year based on performance." },
+      { title: "You must apply separately for scholarships." },
+    ],
+  },
+  application_guide: {
+    short_description: "Follow the steps below to apply.",
+    guide_list: [
+      {
+        title: "Step 1",
+        description: "Fill out the online application form.",
+      },
+      {
+        title: "Step 2",
+        description: "Submit your academic documents.",
+      },
+      {
+        title: "Step 3",
+        description: "Attend an interview (if applicable).",
+      },
+    ],
+    bottom_description: "For any questions, contact our admissions office.",
+  },
+};

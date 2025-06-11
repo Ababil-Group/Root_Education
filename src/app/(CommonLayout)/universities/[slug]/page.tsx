@@ -3,7 +3,7 @@ import TabSection from "@/components/pages/universities/university_details/TabsS
 import TopSection from "@/components/pages/universities/university_details/TopSection";
 import { formatCountryRoute } from "@/lib/utils";
 // import { getUniversityBySlug } from "@/services/getUniversityBySlug";
-import { universityInfo } from "@/services/Data";
+// import { universityInfo } from "@/services/Data";
 
 type TUniversityDetailsPageProps = {
   params: { slug: string };
@@ -22,14 +22,14 @@ export async function generateMetadata({
 const UniversityDetailsPage = async ({
   params,
 }: TUniversityDetailsPageProps) => {
-  const { slug } = params;
+  // const { slug } = params;
 
   // const universityInfo = await getUniversityBySlug(slug);
 
   return (
     <main>
       <PageBanner PageName={formatCountryRoute(params.slug)} />
-      <TopSection universityInfo={universityInfo} />
+      <TopSection />
       <TabSection />
     </main>
   );
