@@ -8,8 +8,8 @@ import TopSection from "@/components/pages/countries/country_details/TopSection"
 import { formatCountryRoute } from "@/lib/utils";
 // import { getAllUniversities } from "@/services/getAllUniversities";
 // import { getCountryBySlug } from "@/services/getCountryBySlug";
-import { dummyCountries, dummyUniversities } from "@/services/Data";
-import { University } from "@/types/university";
+import { dummyCountries } from "@/services/Data";
+// import { University } from "@/types/university";
 
 type TCountryDetailsPageProps = {
   params: { slug: string };
@@ -29,13 +29,13 @@ const CountryDetailsPage = async ({ params }: TCountryDetailsPageProps) => {
   // const countryInfo = await getCountryBySlug(slug);
   // const universitiesData = await getAllUniversities();
   // const universities = universitiesData.results;
-  const universities = dummyUniversities;
+  // const universities = dummyUniversities;
   const countryInfo = dummyCountries[0];
 
-  const partnerUniversities = universities.filter(
-    (university: University) =>
-      university.short_info.country === countryInfo.country,
-  );
+  // const partnerUniversities = universities.filter(
+  //   (university: University) =>
+  //     university.short_info.country === countryInfo.country,
+  // );
 
   return (
     <main>
@@ -47,11 +47,12 @@ const CountryDetailsPage = async ({ params }: TCountryDetailsPageProps) => {
 
       <AccordionSection />
 
-      <BestCities countryInfo={countryInfo} />
-
-      {partnerUniversities.length >= 1 && (
+      {/* <BestCities countryInfo={countryInfo} /> */}
+      <BestCities />
+      <InstituteRepresent />
+      {/* {partnerUniversities.length >= 1 && (
         <InstituteRepresent partnerUniversities={partnerUniversities} />
-      )}
+      )} */}
 
       <FAQ />
     </main>
