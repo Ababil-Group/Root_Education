@@ -69,6 +69,7 @@ export const dummyUniversities = [
       launched: 1991,
     },
     photo: "/images/media/university_photos/UniversityRomania.jpg",
+    logo: "/images/media/university_photos/UniversityRomania.jpg",
   },
   {
     id: 2,

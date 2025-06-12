@@ -1,13 +1,35 @@
 import FadeInUpWithSlowBounce from "@/animation_wrappers/FadeInUpWithSlowBounce";
 import Section from "@/components/common/Section";
-import { University } from "@/types/university";
+// import { University } from "@/types/university";
 import Image from "next/image";
 
-const InstituteRepresent = ({
-  partnerUniversities,
-}: {
-  partnerUniversities: University[];
-}) => {
+const partnerUniversities = [
+  {
+    id: 1,
+    name: "Spiru haret University, Romania",
+    photo: "/images/Spiru.svg",
+    short_info: {
+      country: "Romania",
+    },
+  },
+  {
+    id: 2,
+    name: "Constanta Maritime University CMU",
+    photo: "/images/Constanta.svg",
+    short_info: {
+      country: "Romania",
+    },
+  },
+  {
+    id: 3,
+    name: "Romanian - American University",
+    photo: "/images/American.svg",
+    short_info: {
+      country: "United States",
+    },
+  },
+];
+const InstituteRepresent = () => {
   return (
     <Section
       sectionName="Institute we represent for Countries"
@@ -23,7 +45,7 @@ const InstituteRepresent = ({
               <Image
                 className="size-[70px] rounded-full border"
                 src={university.photo as string}
-                alt={university.name}
+                alt=""
                 height={70}
                 width={70}
               />
