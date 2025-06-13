@@ -4,14 +4,13 @@ import UniversityCard from "@/components/common/UniversityCard";
 import UniversitiesSkeletons from "@/components/skeletons/UniversitiesSkeletons";
 // import { apiUrl } from "@/secrets";
 import { University } from "@/types/university";
-import { dummyUniversities } from "@/services/Data";
+
 // import { useQuery } from "@tanstack/react-query";
 // import axios from "axios";
 // import { useSearchParams } from "next/navigation";
 
-const UniversityContainer = () => {
+const UniversityContainer = ({ universities }: { universities: University[] }) => {
   // const searchParams = useSearchParams();
-  const universities = dummyUniversities;
   const isLoading = false;
 
   // const { data, isLoading } = useQuery({

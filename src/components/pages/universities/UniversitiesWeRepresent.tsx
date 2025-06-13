@@ -28,19 +28,23 @@ const UniversitiesWeRepresent = ({
 }: {
   universityData: University[];
 }) => {
-  // Create pagination data from the array
   const itemsPerPage = 6;
   const searchParams = useSearchParams();
   const currentPage = Number(searchParams.get("page") || "1");
 
+  // Calculate pagination values
+  const totalPages = Math.ceil(universityData.length / itemsPerPage);
+
+  // Get the universities for the current page
+  const startIndex = (currentPage - 1) * itemsPerPage;
+  const endIndex = startIndex + itemsPerPage;
+  const currentUniversities = universityData.slice(startIndex, endIndex);
+
   const paginatedData: PaginatedUniversityData = {
-    universities: universityData,
+    universities: currentUniversities, // Use the sliced data here
     current_page: currentPage,
-    total_pages: Math.ceil(universityData.length / itemsPerPage),
-    next_page:
-      currentPage < Math.ceil(universityData.length / itemsPerPage)
-        ? currentPage + 1
-        : undefined,
+    total_pages: totalPages,
+    next_page: currentPage < totalPages ? currentPage + 1 : undefined,
     previous_page: currentPage > 1 ? currentPage - 1 : undefined,
     total_universities: universityData.length,
   };
@@ -98,7 +102,7 @@ const UniversitiesWeRepresent = ({
           </div>
         </div>
       </div> */}
-      <UniversityContainer />
+      <UniversityContainer universities={paginatedData.universities} />
 
       <div className="mt-10">
         <Pagination>

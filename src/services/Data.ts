@@ -72,7 +72,21 @@ export const dummyUniversities = [
     logo: "/images/media/university_photos/UniversityRomania.jpg",
   },
   {
-    id: 2,
+    id: 3,
+    name: "Malta Institute of Management College, Malta",
+    slug: "malta-institute-of-management-college",
+    description:
+      "Malta Institute of Management College provides premier business and management education, focusing on leadership, innovation, and professional development in Malta.",
+    short_info: {
+      country: "Malta",
+      university_type: "Public",
+      total_students: 55000,
+      launched: 1764,
+    },
+    photo: "/images/media/university_photos/UniversityMalta.png",
+  },
+  {
+    id: 3,
     name: "Budapest University Of Technology & Economics",
     slug: "moscow-state-university",
     description:
@@ -85,38 +99,40 @@ export const dummyUniversities = [
     },
     photo: "/images/media/university_photos/UniversityHungary.png",
   },
-  {
-    id: 3,
-    name: "Three Sixty College",
-    slug: "moscow-state-university",
-    description:
-      "Three Sixty College provides flexible, career-oriented programs in various fields, focusing on practical skills and industry-relevant knowledge for success.",
-    short_info: {
-      country: "Malta",
-      university_type: "Public",
-      total_students: 15000,
-      launched: 1949,
-    },
-    photo: "/images/media/university_photos/UniversityMalta.png",
-  },
+
   {
     id: 4,
-    name: "John Von Neumann University",
-    slug: "moscow-state-university",
+    name: "Lithuanian University of Health Sciences, Kaunas",
+    slug: "Lithuanian-University-of-Health-Sciences-Kaunas",
     description:
-      "John von Neumann University specializes in IT, engineering, and economics, combining rigorous academic training with innovative research opportunities in Hungary.",
+      "Lithuanian University of Health Sciences in Kaunas specializes in medical, dental, and pharmaceutical education, emphasizing research and clinical practice excellence.",
     short_info: {
-      country: "Hungary",
+      country: "Lithuania",
       university_type: "Public",
-      total_students: 150450,
-      launched: 2000,
+      total_students: 70031,
+      launched: 2010,
     },
-    photo: "/images/media/university_photos/UniversityHungary2.png",
+    photo: "/images/media/university_photos/UniversityLithuanian.png",
   },
+
   {
     id: 5,
+    name: "Riga Stradins Univesity",
+    slug: "riga-stradins-university",
+    description:
+      "Riga Stradins University in Latvia offers diverse programs with a focus on health sciences, social sciences, and engineering in a vibrant city.",
+    short_info: {
+      country: "Latvia",
+      university_type: "Public",
+      total_students: 13290,
+      launched: 1950,
+    },
+    photo: "/images/media/university_photos/UnivesityLatvia.png",
+  },
+  {
+    id: 6,
     name: "European Politechnic University, Bulgaria",
-    slug: "moscow-state-university",
+    slug: "european-politechnic-university-bulgaria",
     description:
       "European Politechnic University in Bulgaria provides innovative engineering, architecture, and IT programs, emphasizing practical skills and international collaboration.",
     short_info: {
@@ -128,18 +144,144 @@ export const dummyUniversities = [
     photo: "/images/media/university_photos/UniversityBulgaria.jpg",
   },
   {
-    id: 6,
-    name: "Riga Stradins Univesity",
-    slug: "moscow-state-university",
+    id: 7,
+    name: "Georgian Aviation University",
+    slug: "georgian-aviation-university-georgia",
     description:
-      "Riga Stradins University in Latvia offers diverse programs with a focus on health sciences, social sciences, and engineering in a vibrant city.",
+      "Georgian Aviation University specializes in aviation and aerospace education, offering training in piloting, aircraft maintenance, and aerospace engineering.",
+    short_info: {
+      country: "Georgia",
+      university_type: "Public",
+      total_students: "No",
+      launched: 1992,
+    },
+    photo: "/images/media/university_photos/GeorgianUniversity.png",
+  },
+  {
+    id: 8,
+    name: "Grozny State Oil Technical University",
+    slug: "grozny-state-oil-technical-university",
+    description:
+      "Grozny State Oil Technical University offers specialized education in petroleum engineering and related fields, focusing on industry-relevant skills and research.",
+    short_info: {
+      country: "Russia",
+      university_type: "Public",
+      total_students: 7978,
+      launched: 1920,
+    },
+    photo: "/images/media/university_photos/GroznyUniversity.png",
+  },
+  {
+    id: 9,
+    name: "MODUL University Vienna",
+    slug: "modul-university-vienna",
+    description:
+      "MODUL University Vienna provides innovative programs in business, public governance, and tourism, emphasizing interdisciplinary learning, research, and global perspectives.",
+    short_info: {
+      country: "Austria",
+      university_type: "Public",
+      total_students: 942,
+      launched: 2007,
+    },
+    photo: "/images/media/university_photos/MODULUniversity.png",
+  },
+  {
+    id: 10,
+    name: "Impuls Medical Institute",
+    slug: "Impuls-Medical-Institute",
+    description:
+      "Impuls Medical Institute offers advanced education and training in medical sciences, focusing on clinical skills, research, and healthcare innovation.",
+    short_info: {
+      country: "Uzbekistan",
+      university_type: "Public",
+      total_students: "No",
+      launched: 0,
+    },
+    photo: "/images/media/university_photos/MedicalInstitute.png",
+  },
+  {
+    id: 11,
+    name: "Uskudar University, Istambul",
+    slug: "uskudar-university-istambul",
+    description:
+      "Uskudar University in Istanbul offers diverse programs in health sciences, engineering, and social sciences, emphasizing research, innovation, and practical skills.",
+    short_info: {
+      country: "Turkey",
+      university_type: "Public",
+      total_students: 22103,
+      launched: 2011,
+    },
+    photo: "/images/media/university_photos/UskudarUniversity.png",
+  },
+  {
+    id: 12,
+    name: "Wittenborg University of Applied Sciences",
+    slug: "wittenborg-university-of-applied-sciences",
+    description:
+      "Wittenborg University of Applied Sciences offers practical business, hospitality, and IT programs, combining industry experience, global perspectives, and innovative education.",
+    short_info: {
+      country: "Netherlands",
+      university_type: "Public",
+      total_students: 1100,
+      launched: 1987,
+    },
+    photo: "/images/media/university_photos/WittenborgUniversity.png",
+  },
+  {
+    id: 13,
+    name: "Aarhus University",
+    slug: "aarhus-university",
+    description:
+      "Aarhus University offers comprehensive programs in humanities, social sciences, and natural sciences, emphasizing research, innovation, and interdisciplinary learning.",
+    short_info: {
+      country: "Denmark",
+      university_type: "Public",
+      total_students: "No",
+      launched: 1928,
+    },
+    photo: "/images/media/university_photos/AarhusUniversity.png",
+  },
+  {
+    id: 14,
+    name: "AAS College",
+    slug: "aas-college",
+    description:
+      "AAS College provides practical education in business, design, and technology, emphasizing hands-on experience, industry relevance, and career readiness for students.",
+    short_info: {
+      country: "Greece",
+      university_type: "Public",
+      total_students: "No",
+      launched: 0,
+    },
+    photo: "/images/media/university_photos/AASCollege.png",
+  },
+  {
+    id: 15,
+    name: "Constanta Maritime University CMU",
+    slug: "constant-Maritime-University-CMU",
+    description:
+      "Constanta Maritime University (CMU) excels in maritime education, offering specialized programs in navigation, engineering, and marine sciences.",
+    short_info: {
+      country: "Romania",
+      university_type: "Public",
+      total_students: 4100,
+      launched: 1972,
+    },
+    photo: "/images/media/university_photos/ConstantaUniversity.png",
+  },
+  {
+    id: 16,
+    name: "University of Latvia",
+    slug: "university-of-latvia",
+    description:
+      "University of Latvia offers comprehensive programs in humanities, sciences, and social sciences, emphasizing research, innovation, and global perspectives.",
     short_info: {
       country: "Latvia",
       university_type: "Public",
-      total_students: 13290,
-      launched: 1950,
+      total_students: 19095,
+      launched: 1919,
     },
-    photo: "/images/media/university_photos/UnivesityLatvia.png",
+    photo: "/images/media/university_photos/UniversityLatvia.png",
   },
 ];
 export const universityInfo = {

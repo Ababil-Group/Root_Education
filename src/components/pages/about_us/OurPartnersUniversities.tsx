@@ -30,12 +30,12 @@ const OurPartnersUniversities = async () => {
           }}
         >
           <CarouselContent className="py-5">
-            {universities.map((university: University) => (
+            {universities.map((university) => (
               <CarouselItem
                 className="flex basis-full items-center justify-center md:basis-1/2 lg:basis-1/3 xl:basis-1/6"
                 key={university.id}
               >
-                <UniversityLogoCard university={university} />
+                <UniversityLogoCard university={university as University} />
               </CarouselItem>
             ))}
           </CarouselContent>
