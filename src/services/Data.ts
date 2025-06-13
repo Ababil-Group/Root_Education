@@ -283,7 +283,204 @@ export const dummyUniversities = [
     },
     photo: "/images/media/university_photos/UniversityLatvia.png",
   },
+  {
+    id: 17,
+    name: "Angel Kanchev University of Ruse",
+    slug: "angel-kanchev-university-of-ruse",
+    description:
+      "'Angel Kanchev' University of Ruse provides diverse programs in engineering, economics, and humanities, focusing on research, innovation, and practical skills.",
+    short_info: {
+      country: "Bulgaria",
+      university_type: "Public",
+      total_students: 10000,
+      launched: 1945,
+    },
+    photo: "/images/media/university_photos/AngelUniversity.png",
+  },
+  {
+    id: 18,
+    name: "Nişantaşı University agency",
+    slug: "nisantasi-university-agency",
+    description:
+      "Nişantaşı University provides innovative programs across business, design, and technology fields, focusing on practical skills and industry partnerships.",
+    short_info: {
+      country: "Turkey",
+      university_type: "Public",
+      total_students: "No",
+      launched: 2012,
+    },
+    photo: "/images/media/university_photos/NişantaşıUniversity.png",
+  },
+  {
+    id: 19,
+    name: "University of Copenhegen",
+    slug: "university-of-copenhegen",
+    description:
+      "The University of Copenhagen offers diverse programs across disciplines, focusing on research excellence, interdisciplinary collaboration, and global perspectives in education.",
+    short_info: {
+      country: "Denmark",
+      university_type: "Public",
+      total_students: 36897,
+      launched: 1479,
+    },
+    photo: "/images/media/university_photos/UniversityCopenhegen.png",
+  },
+  {
+    id: 20,
+    name: "Romanian - American University",
+    slug: "romanian-american-university",
+    description:
+      "Romanian-American University fosters global perspectives, offering diverse programs in business, law, and IT with a focus on American education standards.",
+    short_info: {
+      country: "Romania",
+      university_type: "Public",
+      total_students: "No",
+      launched: 1991,
+    },
+    photo: "/images/media/university_photos/AmericanUniversity.png",
+  },
+  {
+    id: 21,
+    name: "Technical University of Denmark",
+    slug: "technical-university-of-denmark",
+    description:
+      "Technical University of Denmark excels in engineering and technology education, emphasizing innovation, research, and practical skills for global industry impact.",
+    short_info: {
+      country: "Denmark",
+      university_type: "Public",
+      total_students: 13414,
+      launched: 1829,
+    },
+    photo: "/images/media/university_photos/TechnicalUniversity.png",
+  },
+  {
+    id: 22,
+    name: "Think Talent, Malta",
+    slug: "the-university-of-edinburgh",
+    description:
+      "Think Talent, Malta provides professional development and training solutions, enhancing skills and careers through tailored programs and expert guidance.",
+    short_info: {
+      country: "Malta",
+      university_type: "Public",
+      total_students: "No",
+      launched: 0,
+    },
+    photo: "/images/media/university_photos/MaltaUniversity.png",
+  },
+  {
+    id: 23,
+    name: "John Von Neumann University",
+    slug: "john-von-neumann-university",
+    description:
+      "John von Neumann University specializes in IT, engineering, and economics, combining rigorous academic training with innovative research opportunities in Hungary.",
+    short_info: {
+      country: "Hungary",
+      university_type: "Public",
+      total_students: "No",
+      launched: 2000,
+    },
+    photo: "/images/media/university_photos/JohnUniversity.png",
+  },
+  {
+    id: 24,
+    name: "Kauno Techniko Kolegija",
+    slug: "kauno-techniko-kolegija",
+    description:
+      "Kauno Techniko Kolegija provides applied education in engineering, technology, and business, focusing on practical skills and industry collaboration.",
+    short_info: {
+      country: "Lithuania",
+      university_type: "Public",
+      total_students: "No",
+      launched: 1920,
+    },
+    photo: "/images/media/university_photos/KaunoUniversity.png",
+  },
+  {
+    id: 25,
+    name: "Naval Academy of Varna, Bulgaria",
+    slug: "naval-academy-of-varna-bulgaria",
+    description:
+      "Naval Academy of Varna in Bulgaria offers specialized education in naval and maritime sciences, emphasizing engineering, navigation, and maritime safety.",
+    short_info: {
+      country: "Bulgaria",
+      university_type: "Public",
+      total_students: "No",
+      launched: 1881,
+    },
+    photo: "/images/media/university_photos/NavalUniversity.png",
+  },
+  {
+    id: 26,
+    name: "Copenhagen Business School",
+    slug: "copenhagen-business-school",
+    description:
+      "Copenhagen Business School delivers top-tier business education with a focus on innovation, global perspectives, and practical skills across diverse industries.",
+    short_info: {
+      country: "Denmark",
+      university_type: "Public",
+      total_students: 222829,
+      launched: 1917,
+    },
+    photo: "/images/media/university_photos/CopenhagenUniversity.png",
+  },
+  {
+    id: 27,
+    name: "EEC-ITIS,",
+    slug: "eec-itis-malta",
+    description:
+      "EEC-ITIS Malta specializes in vocational education, offering programs in tourism, hospitality, and information technology to enhance career opportunities.",
+    short_info: {
+      country: "Malta",
+      university_type: "Public",
+      total_students: "No",
+      launched: 2008,
+    },
+    photo: "/images/media/university_photos/EECUniversity.png",
+  },
+  {
+    id: 28,
+    name: "Wekerle Business School and Psychology",
+    slug: "wekerle-business-school-and-psychology",
+    description:
+      "Wekerle Business School and Psychology integrates business strategies with psychological insights, equipping students with unique skills for leadership and organizational success.",
+    short_info: {
+      country: "Hungary",
+      university_type: "Public",
+      total_students: "No",
+      launched: 2006,
+    },
+    photo: "/images/media/university_photos/WekerleUniversity.png",
+  },
+  {
+    id: 29,
+    name: "Roskilde University",
+    slug: "roskilde-university",
+    description:
+      "Roskilde University provides interdisciplinary education with a focus on research, problem-solving, and collaborative learning, preparing students for global challenges and careers.",
+    short_info: {
+      country: "Denmark",
+      university_type: "Public",
+      total_students: 9500,
+      launched: 1992,
+    },
+    photo: "/images/media/university_photos/RoskildeUniversity.png",
+  },
+  {
+    id: 30,
+    name: "Three Sixty College",
+    slug: "three-sixty-college",
+    description:
+      "Three Sixty College provides flexible, career-oriented programs in various fields, focusing on practical skills and industry-relevant knowledge for success.",
+    short_info: {
+      country: "Malta",
+      university_type: "Public",
+      total_students: 15000,
+      launched: 1949,
+    },
+    photo: "/images/media/university_photos/ThreeUniversity.png",
+  },
 ];
+
 export const universityInfo = {
   about_university: [
     {
