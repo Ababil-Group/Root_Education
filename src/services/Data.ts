@@ -479,6 +479,132 @@ export const dummyUniversities = [
     },
     photo: "/images/media/university_photos/ThreeUniversity.png",
   },
+  {
+    id: 31,
+    name: "MUV College, Malta",
+    slug: "muv-college-malta",
+    description:
+      "MUV College in Malta offers diverse programs in business, IT, and hospitality, emphasizing practical skills and career readiness.",
+    short_info: {
+      country: "Malta",
+      university_type: "Public",
+      total_students: 11000,
+      launched: "No",
+    },
+    photo: "/images/media/university_photos/MUVCollege.png",
+  },
+  {
+    id: 32,
+    name: "University of Miskolc, Hungary",
+    slug: "university-of-miskolc-hungary",
+    description:
+      "University of Miskolc in Hungary offers diverse programs in engineering, economics, and social sciences, emphasizing research, innovation, and practical skills.",
+    short_info: {
+      country: "Hungary",
+      university_type: "Public",
+      total_students: 15000,
+      launched: 1949,
+    },
+    photo: "/images/media/university_photos/UniversityMiskolc.png",
+  },
+  {
+    id: 33,
+    name: "Vilnius University",
+    slug: "vilnius-university-lithuania",
+    description:
+      "Vilnius University in Lithuania offers a wide range of academic programs, fostering research, innovation, and critical thinking across diverse disciplines.",
+    short_info: {
+      country: "Lithuania",
+      university_type: "Public",
+      total_students: 15000,
+      launched: 1949,
+    },
+    photo: "/images/media/university_photos/VilniusUniversity.png",
+  },
+  {
+    id: 34,
+    name: "University of Nyíregyháza",
+    slug: "university-of-nyireghaza-hungary",
+    description:
+      "University of Nyíregyháza provides comprehensive education in arts, sciences, and social sciences, focusing on research, community engagement, and practical training.",
+    short_info: {
+      country: "Hungary",
+      university_type: "Public",
+      total_students: 5000,
+      launched: 2000,
+    },
+    photo: "/images/media/university_photos/UniversityNyíregyháza.png",
+  },
+  {
+    id: 35,
+    name: "University of Szeged",
+    slug: "university-of-szeged-hungary",
+    description:
+      "Aalborg University offers problem-based learning and interdisciplinary research, preparing students with innovative skills and critical thinking for global challenges.",
+    short_info: {
+      country: "Denmark",
+      university_type: "Public",
+      total_students: 17700,
+      launched: 1974,
+    },
+    photo: "/images/media/university_photos/AalborgUniversity.png",
+  },
+  {
+    id: 36,
+    name: "City Unity College",
+    slug: "city-unity-college",
+    description:
+      "City Unity College offers diverse programs in business, design, and technology, focusing on practical skills, innovation, and industry connections for success.",
+    short_info: {
+      country: "Greece",
+      university_type: "Public",
+      total_students: "No",
+      launched: 2004,
+    },
+    photo: "/images/media/university_photos/CityCollege.png",
+  },
+  {
+    id: 37,
+    name: "Uzhhorod National University",
+    slug: "uzhhorod-national-university-ukraine",
+    description:
+      "Uzhhorod National University, located in Ukraine, offers diverse academic programs and fosters research and innovation in a vibrant educational environment.",
+    short_info: {
+      country: "Ukraine",
+      university_type: "Public",
+      total_students: 13600,
+      launched: 1945,
+    },
+    photo: "/images/media/university_photos/UzhhorodUniversity.png",
+  },
+  {
+    id: 38,
+    name: "Dublin Business School",
+    slug: "dublin-business-school-ukraine",
+    description:
+      "Dublin Business School offers diverse business programs, emphasizing practical skills and career readiness in a dynamic learning environment.",
+    short_info: {
+      country: "Ireland",
+      university_type: "Public",
+      total_students: 9000,
+      launched: 1975,
+    },
+    photo: "/images/media/university_photos/DublinSchool.png",
+  },
+  {
+    id: 39,
+    name: "Belgrade Business School",
+    slug: "belgrade-business-school",
+    description:
+      "Belgrade Business School delivers quality education in business and management, fostering critical thinking and practical skills for future leaders in Serbia.",
+    short_info: {
+      country: "Serbia",
+      university_type: "Public",
+      total_students: "No",
+      launched: 1956,
+    },
+    photo: "/images/media/university_photos/BelgradeSchool.png",
+  },
 ];
 
 export const universityInfo = {
