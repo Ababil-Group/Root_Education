@@ -92,11 +92,11 @@ const ContactUsPage = () => {
               <h6 className="text-2xl font-medium duration-200 group-hover:text-white">
                 Call Us
               </h6>
-              <Link href="tel:+40737228622">
+              {/* <Link href="tel:+00000000">
                 <p className="text-center text-sm font-medium group-hover:text-white">
                   +40 123 456 789
                 </p>
-              </Link>
+              </Link> */}
             </FadeInUpWithSlowBounce>
 
             {/* card */}
