@@ -12,6 +12,7 @@ import {
 import { usePathname } from "next/navigation";
 import { Button } from "../ui/Button";
 import FooterUniversityLinks from "./FooterUniversityLinks";
+import { MapPin } from "lucide-react";
 
 const Footer = () => {
   const pathname = usePathname();
@@ -158,7 +159,7 @@ const Footer = () => {
             </p>
             <div className="space-y-3 text-sm text-white">
               <div className="flex items-center justify-start gap-3">
-                <div>
+                {/* <div>
                   <svg
                     width="32"
                     height="32"
@@ -192,7 +193,7 @@ const Footer = () => {
                     </defs>
                   </svg>
                 </div>
-                <div>+40 123 456 789</div>
+                <div>+40 123 456 789</div> */}
               </div>
               <div className="flex items-center justify-start gap-3">
                 <div>
@@ -219,48 +220,20 @@ const Footer = () => {
                 </div>
                 <div>Info@rooteducation.group</div>
               </div>
-              <div className="flex items-center justify-start gap-3">
-                <div>
-                  <svg
-                    width="32"
-                    height="32"
-                    viewBox="0 0 32 32"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <circle
-                      cx="16"
-                      cy="16"
-                      r="15.6667"
-                      stroke="#FDFDFD"
-                      strokeWidth="0.666667"
-                      strokeDasharray="1.33 1.33"
-                    />
-                    <g clipPath="url(#clip0_161_959)">
-                      <path
-                        d="M18.6711 18.5714C20.3737 15.8998 20.1597 16.2331 20.2087 16.1634C20.8286 15.2891 21.1562 14.2601 21.1562 13.1875C21.1562 10.3431 18.8481 8 16 8C13.1612 8 10.8438 10.3385 10.8438 13.1875C10.8438 14.2594 11.1783 15.3153 11.8184 16.2014L13.3288 18.5714C11.714 18.8196 8.96875 19.5591 8.96875 21.1875C8.96875 21.7811 9.35619 22.627 11.2019 23.2862C12.4907 23.7465 14.1947 24 16 24C19.3758 24 23.0312 23.0478 23.0312 21.1875C23.0312 19.5588 20.2893 18.8201 18.6711 18.5714ZM12.6015 15.6858C12.5964 15.6777 12.591 15.6698 12.5854 15.6621C12.0527 14.9292 11.7812 14.0607 11.7812 13.1875C11.7812 10.8432 13.6689 8.9375 16 8.9375C18.3262 8.9375 20.2188 10.844 20.2188 13.1875C20.2188 14.0621 19.9525 14.9012 19.4486 15.6147C19.4034 15.6743 19.639 15.3083 16 21.0184L12.6015 15.6858ZM16 23.0625C12.3127 23.0625 9.90625 21.9787 9.90625 21.1875C9.90625 20.6558 11.1428 19.7814 13.8828 19.4406L15.6047 22.1426C15.647 22.209 15.7054 22.2637 15.7745 22.3016C15.8436 22.3395 15.9212 22.3594 16 22.3594C16.0788 22.3594 16.1563 22.3395 16.2254 22.3016C16.2945 22.2637 16.3529 22.209 16.3953 22.1426L18.1172 19.4406C20.8572 19.7814 22.0938 20.6558 22.0938 21.1875C22.0938 21.9719 19.709 23.0625 16 23.0625Z"
-                        fill="#FDFDFD"
-                      />
-                      <path
-                        d="M16 10.8438C14.7077 10.8438 13.6562 11.8952 13.6562 13.1875C13.6562 14.4798 14.7077 15.5312 16 15.5312C17.2923 15.5312 18.3438 14.4798 18.3438 13.1875C18.3438 11.8952 17.2923 10.8438 16 10.8438ZM16 14.5938C15.2246 14.5938 14.5938 13.9629 14.5938 13.1875C14.5938 12.4121 15.2246 11.7812 16 11.7812C16.7754 11.7812 17.4062 12.4121 17.4062 13.1875C17.4062 13.9629 16.7754 14.5938 16 14.5938Z"
-                        fill="#FDFDFD"
-                      />
-                    </g>
-                    <defs>
-                      <clipPath id="clip0_161_959">
-                        <rect
-                          width="16"
-                          height="16"
-                          fill="white"
-                          transform="translate(8 8)"
-                        />
-                      </clipPath>
-                    </defs>
-                  </svg>
+              <div className="flex flex-col items-start gap-6">
+                <div className="flex items-center gap-3">
+                  <MapPin className="h-6 w-6 text-white" />
+                  <p className="text-white">
+                    UK 12-116 Whitechapel Road 2nd Floor, UK London E1 1JE
+                  </p>
                 </div>
-                <div>
-                  UK 12-116 Whitechapel Road 2nd Floor, UK London E1 1JE
-                </div>
+                {/* <div className="flex items-center gap-3">
+                  <MapPin className="h-6 w-6 text-white" />
+                  <p className="text-white">
+                    Another Location Address, Street Name, City ZIP
+                  </p>
+                </div> */}
+                {/* Add more locations below */}
               </div>
             </div>
           </div>

@@ -1,5 +1,68 @@
 import { Study_Country } from "@/types/country";
 
+export const countrisInfo = {
+  romania: {
+    about_university: [
+      {
+        title: "Overview",
+        description:
+          "This university is one of the top institutions in Europe...",
+      },
+      {
+        title: "History",
+        description: "Founded in 1900, it has a long tradition of excellence.",
+      },
+    ],
+    programs: {
+      undergraduate_programs: [
+        { name: "Computer Science" },
+        { name: "Business Administration" },
+      ],
+      postgraduate_programs: [{ name: "Data Science" }, { name: "MBA" }],
+      doctoral_programs: [{ name: "PhD in Artificial Intelligence" }],
+    },
+    scholarship: {
+      short_description: "The university offers a wide range of scholarships.",
+      table: [
+        {
+          scholarship_name: "Merit-Based Scholarship",
+          amount: "$5,000",
+          eligibility_criteria: "Top 10% academic performance",
+          provider: "University Trust Fund",
+        },
+        {
+          scholarship_name: "Need-Based Grant",
+          amount: "$3,000",
+          eligibility_criteria: "Proven financial need",
+          provider: "Government",
+        },
+      ],
+      notes: [
+        { title: "Scholarships are renewable each year based on performance." },
+        { title: "You must apply separately for scholarships." },
+      ],
+    },
+    application_guide: {
+      short_description: "Follow the steps below to apply.",
+      guide_list: [
+        {
+          title: "Step 1",
+          description: "Fill out the online application form.",
+        },
+        {
+          title: "Step 2",
+          description: "Submit your academic documents.",
+        },
+        {
+          title: "Step 3",
+          description: "Attend an interview (if applicable).",
+        },
+      ],
+      bottom_description: "For any questions, contact our admissions office.",
+    },
+  },
+};
+
 export const dummyCountries: Study_Country[] = [
   {
     id: 1,
@@ -7,52 +70,55 @@ export const dummyCountries: Study_Country[] = [
     slug: "romania",
     flag: "/images/romania_flag.png",
     photo: "/images/romania.jpg",
-    route_slug: "Study in Romania",
+    route_slug: "Study-in-Romania",
     box1: {
       title: "World-Class Education",
       description:
         "Study in Romania offers quality education, affordable tuition, vibrant culture, diverse landscapes, and multilingual courses.",
     },
+    countryinfo: countrisInfo["romania"],
   },
-  {
-    id: 2,
-    country: "Malta",
-    slug: "malta",
-    flag: "/images/malta_flag.png",
-    photo: "/images/malta.png",
-    route_slug: "Study in Romania",
-    box1: {
-      title: "World-Class Education",
-      description:
-        "Study in Malta for quality education, English-speaking environment, historical charm, beautiful landscapes, and Mediterranean climate.",
-    },
-  },
-  {
-    id: 3,
-    country: "Hungary",
-    slug: "hungary",
-    flag: "/images/hungary_flag.png",
-    photo: "/images/hungary.png",
-    route_slug: "Study in Hungary",
-    box1: {
-      title: "World-Class Education",
-      description:
-        "Study in Hungary for affordable tuition, quality education, vibrant culture, historic cities, and beautiful landscapes.",
-    },
-  },
-  {
-    id: 4,
-    country: "Lithuania",
-    slug: "hungary",
-    flag: "/images/lithuania_flag.png",
-    photo: "/images/lithuania.png",
-    route_slug: "Study in Lithuania",
-    box1: {
-      title: "World-Class Education",
-      description:
-        "Study in Lithuania: affordable tuition, quality education, vibrant culture, historic charm, beautiful nature, welcoming environment.",
-    },
-  },
+
+  // },
+  // {
+  //   id: 2,
+  //   country: "Malta",
+  //   slug: "malta",
+  //   flag: "/images/malta_flag.png",
+  //   photo: "/images/malta.png",
+  //   route_slug: "Study in Romania",
+  //   box1: {
+  //     title: "World-Class Education",
+  //     description:
+  //       "Study in Malta for quality education, English-speaking environment, historical charm, beautiful landscapes, and Mediterranean climate.",
+  //   },
+  // },
+  // {
+  //   id: 3,
+  //   country: "Hungary",
+  //   slug: "hungary",
+  //   flag: "/images/hungary_flag.png",
+  //   photo: "/images/hungary.png",
+  //   route_slug: "Study in Hungary",
+  //   box1: {
+  //     title: "World-Class Education",
+  //     description:
+  //       "Study in Hungary for affordable tuition, quality education, vibrant culture, historic cities, and beautiful landscapes.",
+  //   },
+  // },
+  // {
+  //   id: 4,
+  //   country: "Lithuania",
+  //   slug: "hungary",
+  //   flag: "/images/lithuania_flag.png",
+  //   photo: "/images/lithuania.png",
+  //   route_slug: "Study in Lithuania",
+  //   box1: {
+  //     title: "World-Class Education",
+  //     description:
+  //       "Study in Lithuania: affordable tuition, quality education, vibrant culture, historic charm, beautiful nature, welcoming environment.",
+  //   },
+  // },
 ];
 
 export const dummyUniversities = [
@@ -72,7 +138,7 @@ export const dummyUniversities = [
     logo: "/images/media/university_photos/UniversityRomania.jpg",
   },
   {
-    id: 3,
+    id: 2,
     name: "Malta Institute of Management College, Malta",
     slug: "malta-institute-of-management-college",
     description:
@@ -606,64 +672,3 @@ export const dummyUniversities = [
     photo: "/images/media/university_photos/BelgradeSchool.png",
   },
 ];
-
-export const universityInfo = {
-  about_university: [
-    {
-      title: "Overview",
-      description:
-        "This university is one of the top institutions in Europe...",
-    },
-    {
-      title: "History",
-      description: "Founded in 1900, it has a long tradition of excellence.",
-    },
-  ],
-  programs: {
-    undergraduate_programs: [
-      { name: "Computer Science" },
-      { name: "Business Administration" },
-    ],
-    postgraduate_programs: [{ name: "Data Science" }, { name: "MBA" }],
-    doctoral_programs: [{ name: "PhD in Artificial Intelligence" }],
-  },
-  scholarship: {
-    short_description: "The university offers a wide range of scholarships.",
-    table: [
-      {
-        scholarship_name: "Merit-Based Scholarship",
-        amount: "$5,000",
-        eligibility_criteria: "Top 10% academic performance",
-        provider: "University Trust Fund",
-      },
-      {
-        scholarship_name: "Need-Based Grant",
-        amount: "$3,000",
-        eligibility_criteria: "Proven financial need",
-        provider: "Government",
-      },
-    ],
-    notes: [
-      { title: "Scholarships are renewable each year based on performance." },
-      { title: "You must apply separately for scholarships." },
-    ],
-  },
-  application_guide: {
-    short_description: "Follow the steps below to apply.",
-    guide_list: [
-      {
-        title: "Step 1",
-        description: "Fill out the online application form.",
-      },
-      {
-        title: "Step 2",
-        description: "Submit your academic documents.",
-      },
-      {
-        title: "Step 3",
-        description: "Attend an interview (if applicable).",
-      },
-    ],
-    bottom_description: "For any questions, contact our admissions office.",
-  },
-};

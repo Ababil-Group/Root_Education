@@ -11,10 +11,83 @@ import {
   TableRow,
 } from "@/components/ui/table";
 // import { University } from "@/types/university";
-import { universityInfo } from "@/services/Data";
+// import { dummyUniversities } from "@/services/Data";
 import InfoAccordion from "../../countries/country_details/InfoAccordion";
 
+const dummyUniversities = [
+  {
+    short_info: [
+      {
+        title: "Overview",
+        description: "This is a top-ranking university in Europe.",
+      },
+      {
+        title: "Campus",
+        description: "Located in a vibrant city with great facilities.",
+      },
+    ],
+    about_university: [
+      {
+        title: "History",
+        description: "Founded in 1850 with a long tradition of excellence.",
+      },
+      {
+        title: "Mission",
+        description: "To foster innovation and leadership in education.",
+      },
+    ],
+    programs: {
+      undergraduate_programs: [
+        { name: "Computer Science" },
+        { name: "Business Administration" },
+      ],
+      postgraduate_programs: [{ name: "Data Science" }, { name: "MBA" }],
+      doctoral_programs: [{ name: "PhD in AI" }, { name: "PhD in Economics" }],
+    },
+    scholarship: {
+      short_description:
+        "We offer several scholarships based on merit and need.",
+      table: [
+        {
+          scholarship_name: "Merit Scholarship",
+          amount: "$5000/year",
+          eligibility_criteria: "GPA above 3.5",
+          provider: "University Board",
+        },
+        {
+          scholarship_name: "International Excellence",
+          amount: "$8000/year",
+          eligibility_criteria: "Non-EU applicants with high scores",
+          provider: "International Office",
+        },
+      ],
+      notes: [
+        { title: "Application deadlines apply." },
+        { title: "Some scholarships can be combined." },
+      ],
+    },
+    application_guide: {
+      short_description: "Follow these steps to apply for admission.",
+      guide_list: [
+        {
+          title: "Step 1",
+          description: "Complete the online application form.",
+        },
+        {
+          title: "Step 2",
+          description: "Upload all necessary documents.",
+        },
+        {
+          title: "Step 3",
+          description: "Submit the application fee.",
+        },
+      ],
+      bottom_description: "Contact the admissions office for any questions.",
+    },
+  },
+];
 const TabsSection = () => {
+  const universityInfo = dummyUniversities[0];
   const [activeTab, setActiveTab] = useState("tab1");
 
   return (
@@ -66,7 +139,7 @@ const TabsSection = () => {
                 </TabsTrigger>
               </TabsList>
               <TabsContent className="mt-14 space-y-6 pt-5" value="tab1">
-                {universityInfo.about_university.map((item) => (
+                {universityInfo.short_info.map((item) => (
                   <div className="space-y-3" key={item.title}>
                     <h4 className="text-xl font-bold">{item.title}</h4>
                     <p className="text-sm font-medium">{item.description}</p>

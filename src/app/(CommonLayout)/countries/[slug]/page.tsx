@@ -9,6 +9,7 @@ import { formatCountryRoute } from "@/lib/utils";
 // import { getAllUniversities } from "@/services/getAllUniversities";
 // import { getCountryBySlug } from "@/services/getCountryBySlug";
 import { dummyCountries } from "@/services/Data";
+import { Study_Country } from "@/types/country";
 // import { University } from "@/types/university";
 
 type TCountryDetailsPageProps = {
@@ -30,7 +31,7 @@ const CountryDetailsPage = async ({ params }: TCountryDetailsPageProps) => {
   // const universitiesData = await getAllUniversities();
   // const universities = universitiesData.results;
   // const universities = dummyUniversities;
-  const countryInfo = dummyCountries[0];
+  const countryInfo = dummyCountries.find((country) => country.slug === slug);
 
   // const partnerUniversities = universities.filter(
   //   (university: University) =>
@@ -41,7 +42,7 @@ const CountryDetailsPage = async ({ params }: TCountryDetailsPageProps) => {
     <main>
       <PageBanner PageName={formatCountryRoute(slug)} />
 
-      <TopSection countryInfo={countryInfo} />
+      <TopSection countryInfo={countryInfo as Study_Country} />
 
       <TabsSection />
 

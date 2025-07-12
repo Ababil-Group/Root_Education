@@ -93,6 +93,36 @@ export type Faq = {
   answer: string;
 };
 
+export type CountryInfo = {
+  about_university: {
+    title: string;
+    description: string;
+  }[];
+  programs: {
+    undergraduate_programs: { name: string }[];
+    postgraduate_programs: { name: string }[];
+    doctoral_programs: { name: string }[];
+  };
+  scholarship: {
+    short_description: string;
+    table: {
+      scholarship_name: string;
+      amount: string;
+      eligibility_criteria: string;
+      provider: string;
+    }[];
+    notes: { title: string }[];
+  };
+  application_guide: {
+    short_description: string;
+    guide_list: {
+      title: string;
+      description: string;
+    }[];
+    bottom_description: string;
+  };
+};
+
 export type Study_Country = {
   id: number;
   country: string;
@@ -101,6 +131,7 @@ export type Study_Country = {
   photo?: File | null | FileList | string;
   route_slug: string;
   box1: Box1;
+  countryinfo: CountryInfo; // ✅ add this if you're using `info`
 };
 
 export type Whystudylist = {
