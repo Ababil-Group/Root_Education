@@ -28,9 +28,9 @@ import {
 // import { useQuery } from "@tanstack/react-query";
 // import { apiUrl } from "@/secrets";
 // import axios from "axios";
-import { dummyCountries, dummyUniversities } from "@/services/Data";
+import { dummyCountries } from "@/services/Data";
 import { Study_Country } from "@/types/country";
-import { University } from "@/types/university";
+// import { University } from "@/types/university";
 
 const Header = () => {
   const pathname = usePathname();
@@ -38,7 +38,7 @@ const Header = () => {
   const closeSheet = () => setIsOpen(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
   const [isCountriesOpen, setIsCountriesOpen] = useState(false);
-  const [isUniversitiesOpen, setIsUniversitiesOpen] = useState(false);
+  // const [isUniversitiesOpen, setIsUniversitiesOpen] = useState(false);
 
   // const { isLoading: countryLoading, data: countryData } = useQuery({
   //   queryKey: ["countries"],
@@ -52,7 +52,7 @@ const Header = () => {
   //   queryFn: async () => await axios.get(`${apiUrl}/all_university/?limit=all`),
   // });
 
-  const universities = dummyUniversities as University[];
+  // const universities = dummyUniversities as University[];
   const countries = dummyCountries as Study_Country[];
 
   return (
@@ -215,7 +215,7 @@ const Header = () => {
                       )}
                     </CollapsibleTrigger>
                     <CollapsibleContent>
-                      <ul className="space-y-1 py-3  pl-2">
+                      <ul className="space-y-1 py-3 pl-2">
                         {!countries
                           ? "Loading..."
                           : countries?.map((country: Study_Country) => (
@@ -303,7 +303,8 @@ const Header = () => {
                     </CollapsibleContent>
                   </Collapsible>
                 </li> */}
-                <li>
+
+                {/* <li>
                   <Collapsible
                     open={isUniversitiesOpen}
                     onOpenChange={setIsUniversitiesOpen}
@@ -327,7 +328,7 @@ const Header = () => {
                                   href={`/universities/${university.slug}`} // Update route as needed
                                   onClick={closeSheet}
                                 >
-                                  {/* University Photo + Name */}
+                                  
                                   <Image
                                     className="size-[30px] rounded-full border"
                                     src={university.photo as string}
@@ -339,7 +340,7 @@ const Header = () => {
                                     {university.name}
                                   </span>
 
-                                  {/* Hover Tooltip (Short Info) */}
+                              
                                   <div className="absolute left-full top-0 z-50 ml-2 hidden w-[300px] rounded-md bg-white p-3 shadow-lg group-hover:block">
                                     <div className="flex items-center gap-3">
                                       <Image
@@ -378,7 +379,7 @@ const Header = () => {
                       </ul>
                     </CollapsibleContent>
                   </Collapsible>
-                </li>
+                </li> */}
 
                 <li>
                   <Link

@@ -11,7 +11,7 @@ import {
 } from "react-icons/fa";
 import { usePathname } from "next/navigation";
 import { Button } from "../ui/Button";
-import FooterUniversityLinks from "./FooterUniversityLinks";
+// import FooterUniversityLinks from "./FooterUniversityLinks";
 import { MapPin } from "lucide-react";
 
 const Footer = () => {
@@ -273,10 +273,10 @@ const Footer = () => {
               ))}
             </ul>
           </div>
-          <div className="basis-[25%] space-y-7 text-white">
+          {/* <div className="basis-[25%] space-y-7 text-white">
             <span className="border-b-[1px] pb-1 text-xl">Universities</span>
             <FooterUniversityLinks />
-          </div>
+          </div> */}
         </div>
         <div className="container">
           <hr className="mt-[40px]" />

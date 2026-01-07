@@ -16,7 +16,7 @@ import { IoMdArrowDropright } from "react-icons/io";
 import { usePathname } from "next/navigation";
 import NavCountries from "./NavCountries";
 import { servicesLinks } from "@/constants";
-import NavUniversities from "./NavUniversities";
+// import NavUniversities from "./NavUniversities";
 
 export function NavMenu() {
   const pathname = usePathname();
@@ -63,14 +63,14 @@ export function NavMenu() {
           </NavigationMenuContent>
         </NavigationMenuItem>
 
-        <NavigationMenuItem className="hover:text-primary">
+        {/* <NavigationMenuItem className="hover:text-primary">
           <NavigationMenuTrigger>
             <Link href="/universities">Universities</Link>
           </NavigationMenuTrigger>
           <NavigationMenuContent className="bg-white">
             <NavUniversities />
           </NavigationMenuContent>
-        </NavigationMenuItem>
+        </NavigationMenuItem> */}
 
         <NavigationMenuItem
           className={`hover:text-primary ${pathname === "/how-we-work" && "text-primary"}`}
