@@ -8,7 +8,7 @@ import Image from "next/image";
 // import axios from "axios";
 import { Skeleton } from "../ui/skeleton";
 // import { apiUrl } from "@/secrets";
-import { dummyCountries} from "@/services/Data";
+import { dummyCountries } from "@/services/Data";
 import { Study_Country } from "@/types/country";
 const NavCountries = () => {
   // const { data, isLoading } = useQuery({
@@ -45,11 +45,7 @@ const NavCountries = () => {
       {data?.data?.map((country: Study_Country) => (
         <div key={country.id}>
           <NavigationMenuItem className="list-none">
-            <Link
-              href={`/countries/${country.route_slug}`}
-              legacyBehavior
-              passHref
-            >
+            <Link href={`/countries/${country.slug}`} legacyBehavior passHref>
               <NavigationMenuLink className="flex items-center justify-start gap-x-2 font-semibold text-secondary duration-100 hover:text-primary">
                 <Image
                   className="size-[30px] rounded-full border"

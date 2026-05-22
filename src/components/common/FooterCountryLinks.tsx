@@ -15,7 +15,7 @@ const FooterCountryLinks = async () => {
           <IoMdArrowDropright className="text-2xl" />
           <Link
             className="duration-200 hover:text-primary"
-            href={`/countries/${country.route_slug}`}
+            href={`/countries/${country.slug}`}
           >
             Study in {country.country}
           </Link>

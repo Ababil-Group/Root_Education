@@ -2,6 +2,7 @@
 
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { useState } from "react";
+import { UniversityInfo } from "@/types/university";
 import {
   Table,
   TableBody,
@@ -14,9 +15,19 @@ import {
 // import { dummyUniversities } from "@/services/Data";
 import InfoAccordion from "../../countries/country_details/InfoAccordion";
 
-const dummyUniversities = [
+const defaultUniversityInfo: UniversityInfo[] = [
   {
-    short_info: [
+    name: "Placeholder University",
+    image: "",
+    thumbnail: "",
+    photo: "",
+    short_info: {
+      country: "Placeholder Country",
+      university_type: "Public",
+      total_students: 12345,
+      launched: 1900,
+    },
+    about_university: [
       {
         title: "Overview",
         description: "This is a top-ranking university in Europe.",
@@ -24,16 +35,6 @@ const dummyUniversities = [
       {
         title: "Campus",
         description: "Located in a vibrant city with great facilities.",
-      },
-    ],
-    about_university: [
-      {
-        title: "History",
-        description: "Founded in 1850 with a long tradition of excellence.",
-      },
-      {
-        title: "Mission",
-        description: "To foster innovation and leadership in education.",
       },
     ],
     programs: {
@@ -84,10 +85,26 @@ const dummyUniversities = [
       ],
       bottom_description: "Contact the admissions office for any questions.",
     },
+    admission: [
+      {
+        title: "Eligibility Criteria",
+        description:
+          "Students should meet the university's academic and language requirements.",
+      },
+      {
+        title: "Admission Process",
+        description:
+          "Apply online, submit documents, and wait for the letter of acceptance.",
+      },
+    ],
   },
 ];
-const TabsSection = () => {
-  const universityInfo = dummyUniversities[0];
+const TabsSection = ({
+  universityInfo,
+}: {
+  universityInfo?: UniversityInfo;
+}) => {
+  const info = universityInfo ?? defaultUniversityInfo[0];
   const [activeTab, setActiveTab] = useState("tab1");
 
   return (
@@ -139,7 +156,7 @@ const TabsSection = () => {
                 </TabsTrigger>
               </TabsList>
               <TabsContent className="mt-14 space-y-6 pt-5" value="tab1">
-                {universityInfo.short_info.map((item) => (
+                {info.about_university.map((item) => (
                   <div className="space-y-3" key={item.title}>
                     <h4 className="text-xl font-bold">{item.title}</h4>
                     <p className="text-sm font-medium">{item.description}</p>
@@ -153,7 +170,7 @@ const TabsSection = () => {
                       Undergraduate Programs
                     </h4>
                     <ul className="list-disc space-y-3 pl-5 text-sm font-medium">
-                      {universityInfo.programs.undergraduate_programs.map(
+                      {info.programs.undergraduate_programs.map(
                         (programName) => (
                           <li key={programName.name}>{programName.name}</li>
                         ),
@@ -165,7 +182,7 @@ const TabsSection = () => {
                       Postgraduate Programs
                     </h4>
                     <ul className="list-disc space-y-3 pl-5 text-sm font-medium">
-                      {universityInfo.programs.postgraduate_programs.map(
+                      {info.programs.postgraduate_programs.map(
                         (programName) => (
                           <li key={programName.name}>{programName.name}</li>
                         ),
@@ -177,11 +194,9 @@ const TabsSection = () => {
                       Doctoral Programs
                     </h4>
                     <ul className="list-disc space-y-3 pl-5 text-sm font-medium">
-                      {universityInfo.programs.doctoral_programs.map(
-                        (programName) => (
-                          <li key={programName.name}>{programName.name}</li>
-                        ),
-                      )}
+                      {info.programs.doctoral_programs.map((programName) => (
+                        <li key={programName.name}>{programName.name}</li>
+                      ))}
                     </ul>
                   </div>
                 </div>
@@ -189,7 +204,7 @@ const TabsSection = () => {
               <TabsContent value="tab3">
                 <div className="pt-8">
                   <p className="mb-6 text-sm font-medium">
-                    {universityInfo.scholarship.short_description}
+                    {info.scholarship.short_description}
                   </p>
                   <div>
                     <Table className="border text-center">
@@ -210,7 +225,7 @@ const TabsSection = () => {
                         </TableRow>
                       </TableHeader>
                       <TableBody>
-                        {universityInfo.scholarship.table.map((scholarship) => (
+                        {info.scholarship.table.map((scholarship) => (
                           <TableRow
                             className="text-sm font-medium"
                             key={scholarship.scholarship_name}
@@ -234,7 +249,7 @@ const TabsSection = () => {
                   </div>
                   <p className="mb-5 mt-10 text-xl font-medium">Notes:</p>
                   <ul className="list-disc space-y-2 pl-5 text-sm font-medium">
-                    {universityInfo.scholarship.notes.map((note) => (
+                    {info.scholarship.notes.map((note) => (
                       <li key={note.title}>{note.title}</li>
                     ))}
                   </ul>
@@ -246,22 +261,20 @@ const TabsSection = () => {
               <TabsContent value="tab4">
                 <div className="pt-8">
                   <p className="mb-6 text-sm font-medium">
-                    {universityInfo.application_guide.short_description}
+                    {info.application_guide.short_description}
                   </p>
                   <ol className="list-decimal space-y-1 pl-6 text-sm">
-                    {universityInfo.application_guide.guide_list.map(
-                      (guide) => (
-                        <li key={guide.title}>
-                          {" "}
-                          <span className="font-bold">{guide.title}:</span>{" "}
-                          {guide.description}
-                        </li>
-                      ),
-                    )}
+                    {info.application_guide.guide_list.map((guide) => (
+                      <li key={guide.title}>
+                        {" "}
+                        <span className="font-bold">{guide.title}:</span>{" "}
+                        {guide.description}
+                      </li>
+                    ))}
                   </ol>
 
                   <p className="mt-5 text-sm font-medium">
-                    {universityInfo.application_guide.bottom_description}
+                    {info.application_guide.bottom_description}
                   </p>
                 </div>
               </TabsContent>
@@ -278,7 +291,7 @@ const TabsSection = () => {
               content={
                 <>
                   <div className="space-y-10">
-                    {universityInfo.about_university.map((item) => (
+                    {info.about_university.map((item) => (
                       <div className="space-y-3" key={item.title}>
                         <h4 className="text-xl font-bold">{item.title}</h4>
                         <p className="text-sm font-medium">
@@ -300,7 +313,7 @@ const TabsSection = () => {
                         Undergraduate Programs
                       </h4>
                       <ul className="list-disc space-y-3 pl-5 text-sm font-medium">
-                        {universityInfo.programs.undergraduate_programs.map(
+                        {info.programs.undergraduate_programs.map(
                           (programName) => (
                             <li key={programName.name}>{programName.name}</li>
                           ),
@@ -312,7 +325,7 @@ const TabsSection = () => {
                         Postgraduate Programs
                       </h4>
                       <ul className="list-disc space-y-3 pl-5 text-sm font-medium">
-                        {universityInfo.programs.postgraduate_programs.map(
+                        {info.programs.postgraduate_programs.map(
                           (programName) => (
                             <li key={programName.name}>{programName.name}</li>
                           ),
@@ -324,11 +337,9 @@ const TabsSection = () => {
                         Doctoral Programs
                       </h4>
                       <ul className="list-disc space-y-3 pl-5 text-sm font-medium">
-                        {universityInfo.programs.doctoral_programs.map(
-                          (programName) => (
-                            <li key={programName.name}>{programName.name}</li>
-                          ),
-                        )}
+                        {info.programs.doctoral_programs.map((programName) => (
+                          <li key={programName.name}>{programName.name}</li>
+                        ))}
                       </ul>
                     </div>
                   </div>
@@ -341,10 +352,10 @@ const TabsSection = () => {
                 <>
                   <div>
                     <p className="mb-6 text-sm font-medium">
-                      {universityInfo.scholarship.short_description}
+                      {info.scholarship.short_description}
                     </p>
                     <div className="space-y-10">
-                      {universityInfo.scholarship.table.map((scholarship) => (
+                      {info.scholarship.table.map((scholarship) => (
                         <Table
                           className="border text-center"
                           key={scholarship.scholarship_name}
@@ -388,7 +399,7 @@ const TabsSection = () => {
                     </div>
                     <p className="mb-5 mt-10 text-xl font-medium">Notes:</p>
                     <ul className="list-disc space-y-5 pl-5 text-sm font-medium">
-                      {universityInfo.scholarship.notes.map((note) => (
+                      {info.scholarship.notes.map((note) => (
                         <li key={note.title}>{note.title}</li>
                       ))}
                     </ul>
@@ -405,24 +416,20 @@ const TabsSection = () => {
                 <>
                   <div>
                     <p className="mb-6 text-sm font-medium">
-                      {universityInfo.application_guide.short_description}
+                      {info.application_guide.short_description}
                     </p>
                     <ol className="list-decimal space-y-1 pl-6 text-sm">
-                      {universityInfo.application_guide.guide_list.map(
-                        (guide) => (
-                          <li key={guide.title}>
-                            {" "}
-                            <span className="font-bold">
-                              {guide.title}:
-                            </span>{" "}
-                            {guide.description}
-                          </li>
-                        ),
-                      )}
+                      {info.application_guide.guide_list.map((guide) => (
+                        <li key={guide.title}>
+                          {" "}
+                          <span className="font-bold">{guide.title}:</span>{" "}
+                          {guide.description}
+                        </li>
+                      ))}
                     </ol>
 
                     <p className="mt-5 text-sm font-medium">
-                      {universityInfo.application_guide.bottom_description}
+                      {info.application_guide.bottom_description}
                     </p>
                   </div>
                 </>

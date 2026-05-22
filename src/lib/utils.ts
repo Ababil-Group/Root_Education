@@ -37,10 +37,14 @@ export const formatCountryRoute = (input: string): string => {
     .join(" "); // Join the words back with spaces
 };
 
-export const formatIndianNumber = (number: number) => {
-  const numStr = number.toString();
+export const formatIndianNumber = (value: number | string) => {
+  const num =
+    typeof value === "string" ? Number(value.replace(/[^0-9]/g, "")) : value;
+  if (Number.isNaN(num)) {
+    return String(value);
+  }
 
-  // Add commas as per Indian numbering format
+  const numStr = String(num);
   const lastThree = numStr.slice(-3);
   const otherNumbers = numStr.slice(0, -3);
   const formattedNumber =

@@ -6,6 +6,7 @@ import InstituteRepresent from "@/components/pages/countries/country_details/Ins
 import TabsSection from "@/components/pages/countries/country_details/TabsSection";
 import TopSection from "@/components/pages/countries/country_details/TopSection";
 import { formatCountryRoute } from "@/lib/utils";
+import { notFound } from "next/navigation";
 // import { getAllUniversities } from "@/services/getAllUniversities";
 // import { getCountryBySlug } from "@/services/getCountryBySlug";
 import { dummyCountries } from "@/services/Data";
@@ -33,6 +34,10 @@ const CountryDetailsPage = async ({ params }: TCountryDetailsPageProps) => {
   // const universities = dummyUniversities;
   const countryInfo = dummyCountries.find((country) => country.slug === slug);
 
+  if (!countryInfo) {
+    notFound();
+  }
+
   // const partnerUniversities = universities.filter(
   //   (university: University) =>
   //     university.short_info.country === countryInfo.country,
@@ -44,7 +49,7 @@ const CountryDetailsPage = async ({ params }: TCountryDetailsPageProps) => {
 
       <TopSection countryInfo={countryInfo as Study_Country} />
 
-      <TabsSection />
+      <TabsSection countryInfo={countryInfo as Study_Country} />
 
       <AccordionSection />
 

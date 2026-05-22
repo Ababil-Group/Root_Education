@@ -36,7 +36,7 @@ const BestCountriesChosenByStudents = async () => {
                 <EuropeStudyCountryCard
                   imageUrl={country.photo ? (country.photo as string) : ""}
                   name={country.country}
-                  slug={country.route_slug}
+                  slug={country.slug}
                 />
               </CarouselItem>
             ))}

@@ -35,7 +35,7 @@ const StudyCountryCard = ({ country }: { country: Study_Country }) => {
         </p>
         <div className="flex items-center justify-center">
           <Link
-            href={`/countries/study-in-${country.route_slug}`}
+            href={`/countries/${country.slug}`}
             className="flex items-center justify-start text-sm font-medium text-primary duration-200 group-hover:text-white hover:text-secondary"
           >
             See More <MdArrowRight className="text-xl" />

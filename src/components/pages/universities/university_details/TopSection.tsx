@@ -8,8 +8,7 @@ import { Button } from "@/components/ui/Button";
 import { IoPlayCircle } from "react-icons/io5";
 import { UniversityInfo } from "@/types/university";
 
-
-const universityInfo : UniversityInfo = {
+const defaultUniversityInfo: UniversityInfo = {
   name: "University of Delhi",
   image: "/images/universities/university-of-delhi.jpg",
   thumbnail: "/images/universities/university-of-delhi.jpg",
@@ -17,7 +16,7 @@ const universityInfo : UniversityInfo = {
     country: "India",
     university_type: "Public",
     total_students: 500000,
-    launched: 1922
+    launched: 1922,
   },
   about_university: [
     {
@@ -34,7 +33,7 @@ const universityInfo : UniversityInfo = {
       title: "Mission",
       description:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, officia. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, officia.",
-    }
+    },
   ],
   programs: {
     undergraduate_programs: [
@@ -58,14 +57,17 @@ const universityInfo : UniversityInfo = {
     doctoral_programs: [],
   },
   scholarship: {
-    short_description: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+    short_description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
     table: [],
-    notes: []
+    notes: [],
   },
   application_guide: {
-    short_description: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+    short_description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
     guide_list: [],
-    bottom_description: "Lorem ipsum dolor sit amet consectetur adipisicing elit."
+    bottom_description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
   },
   admission: [
     {
@@ -88,9 +90,15 @@ const universityInfo : UniversityInfo = {
       description:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, officia. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, officia.",
     },
-  ]
-}
-const TopSection = () => {
+  ],
+};
+const TopSection = ({
+  universityInfo,
+}: {
+  universityInfo?: UniversityInfo;
+}) => {
+  const info = universityInfo ?? defaultUniversityInfo;
+
   // Thumbnail processing
   const getThumbnailSrc = (
     thumbnail: string | File | FileList | null | undefined,
@@ -109,11 +117,11 @@ const TopSection = () => {
         <div className="flex flex-col items-center justify-between gap-x-20 gap-y-10 rounded-xl border px-8 py-8 shadow-sm lg:flex-row">
           <FadeInLeftWithSlowBounce className="basis-full space-y-5 xl:basis-1/2">
             <h2 className="text-center text-4xl font-semibold lg:text-left">
-              {universityInfo.about_university[0].title},{" "}
-              {universityInfo.about_university[1].title}
+              {info.about_university[0].title},{" "}
+              {info.about_university[1].title}
             </h2>
             <p className="text-center text-sm font-medium lg:text-left">
-              {universityInfo.programs.undergraduate_programs[0].name}
+              {info.programs.undergraduate_programs[0].name}
             </p>
             <div className="flex gap-x-4">
               <div className="space-y-2">
@@ -138,7 +146,7 @@ const TopSection = () => {
                       fill="#F37329"
                     />
                   </svg>
-                  <span>Country : {universityInfo.short_info.country}</span>
+                  <span>Country : {info.short_info.country}</span>
                 </div>
                 <div className="flex items-center justify-start gap-x-2 text-sm font-medium">
                   <svg
@@ -155,7 +163,7 @@ const TopSection = () => {
                   </svg>
                   <span>
                     University Type :{" "}
-                    {universityInfo.short_info.university_type}
+                    {info.short_info.university_type}
                   </span>
                 </div>
               </div>
@@ -179,9 +187,9 @@ const TopSection = () => {
                   </svg>
                   <span>
                     Total Students :{" "}
-                    {universityInfo.short_info.total_students
+                    {info.short_info.total_students
                       ? formatIndianNumber(
-                          universityInfo.short_info.total_students,
+                          info.short_info.total_students,
                         )
                       : "N/A"}
                   </span>
@@ -201,9 +209,9 @@ const TopSection = () => {
                   </svg>
                   <span>
                     Launched :{" "}
-                    {universityInfo.short_info?.launched
+                    {info.short_info?.launched
                       ? getYearFromDate(
-                          universityInfo.short_info?.launched.toString(),
+                          info.short_info?.launched.toString(),
                         )
                       : "N/A"}
                   </span>
@@ -240,8 +248,8 @@ const TopSection = () => {
                 <div className="cursor-pointer">
                   <Image
                     className="cursor-pointer rounded-lg object-cover object-center xl:object-right"
-                    src={getThumbnailSrc(universityInfo.photo)}
-                    alt={universityInfo.name}
+                    src={getThumbnailSrc(info.photo)}
+                    alt={info.name}
                     fill
                   />
                   <span className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full bg-white">

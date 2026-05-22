@@ -10,8 +10,8 @@ export type University = {
   short_info: {
     country: string;
     university_type: string;
-    total_students: number | undefined;
-    launched: number | undefined;
+    total_students: string | number | undefined;
+    launched: string | number | undefined;
   };
 
   photo?: File | null | FileList | string;
@@ -69,7 +69,7 @@ export interface UniversityInfo {
   short_info: {
     country: string;
     university_type: string;
-    total_students?: number;
+    total_students?: string | number;
     launched?: number | string;
   };
   about_university: AboutUniversity[];

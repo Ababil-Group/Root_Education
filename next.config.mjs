@@ -1,8 +1,40 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
-    // No need for remotePatterns when using local public folder
-    unoptimized: true, // Optionally disable image optimization during dev
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "flagcdn.com",
+        port: "",
+        pathname: "/**",
+      },
+      {
+        protocol: "https",
+        hostname: "images.unsplash.com",
+        port: "",
+        pathname: "/**",
+      },
+      {
+        protocol: "https",
+        hostname: "flagpedia.net",
+        port: "",
+        pathname: "/**",
+      },
+      {
+        protocol: "https",
+        hostname: "flagsapi.com",
+        port: "",
+        pathname: "/**",
+      },
+      {
+        protocol: "https",
+        hostname: "images.pexels.com",
+        port: "",
+        pathname: "/**", // Allows any path from pexels
+      },
+    ],
+    // Remove unoptimized: true if you want Next.js optimization
+    // unoptimized: false, // Set to false to enable Next.js image optimization
   },
 };
 

@@ -222,7 +222,7 @@ const Header = () => {
                               <li key={country.id}>
                                 <Link
                                   className="group relative flex items-center justify-start gap-2 rounded-lg p-1 hover:bg-sidebar-accent"
-                                  href={`/countries/${country.route_slug}`}
+                                  href={`/countries/${country.slug}`}
                                   onClick={closeSheet}
                                 >
                                   {/* Flag + Name */}

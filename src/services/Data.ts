@@ -1,6 +1,6 @@
 import { Study_Country } from "@/types/country";
 
-export const countrisInfo = {
+export const countriesInfo = {
   romania: {
     about_university: [
       {
@@ -49,16 +49,263 @@ export const countrisInfo = {
           title: "Step 1",
           description: "Fill out the online application form.",
         },
-        {
-          title: "Step 2",
-          description: "Submit your academic documents.",
-        },
+        { title: "Step 2", description: "Submit your academic documents." },
         {
           title: "Step 3",
           description: "Attend an interview (if applicable).",
         },
       ],
       bottom_description: "For any questions, contact our admissions office.",
+    },
+  },
+  malta: {
+    about_university: [
+      {
+        title: "Overview",
+        description:
+          "The University of Malta offers high-quality education with a Mediterranean focus.",
+      },
+      {
+        title: "History",
+        description:
+          "Founded in 1592, it is one of the oldest universities in the world.",
+      },
+    ],
+    programs: {
+      undergraduate_programs: [
+        { name: "Medicine and Surgery" },
+        { name: "Law" },
+        { name: "Economics" },
+      ],
+      postgraduate_programs: [
+        { name: "MSc in Digital Games" },
+        { name: "MA in European Politics" },
+      ],
+      doctoral_programs: [{ name: "PhD in Oceanography" }],
+    },
+    scholarship: {
+      short_description:
+        "Malta offers government and university scholarships for international students.",
+      table: [
+        {
+          scholarship_name: "TESLA Scholarship",
+          amount: "€4,000",
+          eligibility_criteria: "High academic achievement",
+          provider: "Malta Government",
+        },
+        {
+          scholarship_name: "International Excellence Award",
+          amount: "€2,500",
+          eligibility_criteria: "Top 15% of applicants",
+          provider: "University of Malta",
+        },
+      ],
+      notes: [
+        { title: "Scholarships cover partial tuition only." },
+        { title: "Separate application deadline: March 31." },
+      ],
+    },
+    application_guide: {
+      short_description: "Apply through the central admissions portal.",
+      guide_list: [
+        {
+          title: "Step 1",
+          description: "Create an account on the University Portal.",
+        },
+        {
+          title: "Step 2",
+          description: "Upload transcripts and English test scores.",
+        },
+        { title: "Step 3", description: "Pay the €50 application fee." },
+      ],
+      bottom_description: "Visa process takes 4-6 weeks after acceptance.",
+    },
+  },
+  cyprus: {
+    about_university: [
+      {
+        title: "Overview",
+        description:
+          "Cyprus is a hub for EU-accredited degrees with affordable tuition.",
+      },
+      {
+        title: "History",
+        description:
+          "Modern universities emerged in the 1980s, but education roots go back centuries.",
+      },
+    ],
+    programs: {
+      undergraduate_programs: [
+        { name: "Hospitality Management" },
+        { name: "Pharmacy" },
+      ],
+      postgraduate_programs: [
+        { name: "MSc in Renewable Energy" },
+        { name: "MBA" },
+      ],
+      doctoral_programs: [{ name: "PhD in Neuroscience" }],
+    },
+    scholarship: {
+      short_description:
+        "Scholarships available from the Cyprus Government and local universities.",
+      table: [
+        {
+          scholarship_name: "Cyprus International Scholarship",
+          amount: "€3,000/year",
+          eligibility_criteria: "GPA 3.5+",
+          provider: "Ministry of Education",
+        },
+        {
+          scholarship_name: "Early Bird Discount",
+          amount: "10% tuition",
+          eligibility_criteria: "Apply by May 1",
+          provider: "University of Cyprus",
+        },
+      ],
+      notes: [
+        { title: "Some scholarships require Greek language basics." },
+        { title: "Renewable yearly with good standing." },
+      ],
+    },
+    application_guide: {
+      short_description: "Submit documents online via university website.",
+      guide_list: [
+        { title: "Step 1", description: "Complete the online application." },
+        { title: "Step 2", description: "Get two recommendation letters." },
+        {
+          title: "Step 3",
+          description: "Provide proof of English (IELTS 6.5).",
+        },
+      ],
+      bottom_description:
+        "Student visa allows part-time work up to 20 hrs/week.",
+    },
+  },
+  hungary: {
+    about_university: [
+      {
+        title: "Overview",
+        description:
+          "Hungary is famous for medical and engineering degrees, especially in Budapest.",
+      },
+      {
+        title: "History",
+        description:
+          "The University of Szeged was founded in 1581, with strong research tradition.",
+      },
+    ],
+    programs: {
+      undergraduate_programs: [
+        { name: "General Medicine" },
+        { name: "Civil Engineering" },
+      ],
+      postgraduate_programs: [
+        { name: "MSc in Computer Science" },
+        { name: "MA in International Relations" },
+      ],
+      doctoral_programs: [{ name: "PhD in Chemistry" }],
+    },
+    scholarship: {
+      short_description:
+        "Stipendium Hungaricum is the main government scholarship.",
+      table: [
+        {
+          scholarship_name: "Stipendium Hungaricum",
+          amount: "Full tuition + stipend",
+          eligibility_criteria: "All international students",
+          provider: "Hungarian Government",
+        },
+        {
+          scholarship_name: "Christian Nagy Scholarship",
+          amount: "€2,000",
+          eligibility_criteria: "Top 5% in entrance exam",
+          provider: "Budapest University",
+        },
+      ],
+      notes: [
+        { title: "Stipendium covers housing and health insurance." },
+        { title: "Application opens in November." },
+      ],
+    },
+    application_guide: {
+      short_description: "Most programs require entrance exam or interview.",
+      guide_list: [
+        { title: "Step 1", description: "Register on the Stipendium portal." },
+        {
+          title: "Step 2",
+          description: "Submit school leaving certificate and transcript.",
+        },
+        {
+          title: "Step 3",
+          description: "Take online entrance test (if medical).",
+        },
+      ],
+      bottom_description: "Acceptance rate ~20% for medicine programs.",
+    },
+  },
+  uk: {
+    about_university: [
+      {
+        title: "Overview",
+        description:
+          "UK universities are world-renowned, with degrees recognized globally.",
+      },
+      {
+        title: "History",
+        description:
+          "Oxford and Cambridge date back to the 12th–13th centuries.",
+      },
+    ],
+    programs: {
+      undergraduate_programs: [
+        { name: "Law" },
+        { name: "Mechanical Engineering" },
+      ],
+      postgraduate_programs: [
+        { name: "MSc in Artificial Intelligence" },
+        { name: "MA in Creative Writing" },
+      ],
+      doctoral_programs: [{ name: "PhD in Economics" }],
+    },
+    scholarship: {
+      short_description:
+        "Chevening, Commonwealth, and university-specific scholarships available.",
+      table: [
+        {
+          scholarship_name: "Chevening Scholarship",
+          amount: "Full tuition + living costs",
+          eligibility_criteria:
+            "Leadership potential + 2 years work experience",
+          provider: "UK Government",
+        },
+        {
+          scholarship_name: "GREAT Scholarship",
+          amount: "£10,000",
+          eligibility_criteria: "Citizens of eligible countries",
+          provider: "British Council",
+        },
+      ],
+      notes: [
+        { title: "Chevening deadline is usually November." },
+        { title: "Separate scholarship essays required." },
+      ],
+    },
+    application_guide: {
+      short_description:
+        "Apply via UCAS for undergraduate, directly for postgraduate.",
+      guide_list: [
+        {
+          title: "Step 1",
+          description: "Choose course and check entry requirements.",
+        },
+        { title: "Step 2", description: "Write a personal statement." },
+        {
+          title: "Step 3",
+          description: "Submit application and pay fee (£22 for UCAS).",
+        },
+      ],
+      bottom_description:
+        "Student visa allows part-time work during term time.",
     },
   },
 };
@@ -68,64 +315,84 @@ export const dummyCountries: Study_Country[] = [
     id: 1,
     country: "Romania",
     slug: "romania",
-    flag: "/images/romania_flag.png",
-    photo: "/images/romania.jpg",
-    route_slug: "Study-in-Romania",
+    flag: "https://flagcdn.com/w320/ro.png",
+    photo:
+      "https://images.pexels.com/photos/28898472/pexels-photo-28898472.jpeg",
+    route_slug: "Study in Romania",
     box1: {
       title: "World-Class Education",
       description:
-        "Study in Romania offers quality education, affordable tuition, vibrant culture, diverse landscapes, and multilingual courses.",
+        "Study in Romania for quality education, English-speaking programs, rich history, and affordable tuition.",
     },
-    countryinfo: countrisInfo["romania"],
+    countryinfo: countriesInfo["romania"],
   },
-
-  // },
-  // {
-  //   id: 2,
-  //   country: "Malta",
-  //   slug: "malta",
-  //   flag: "/images/malta_flag.png",
-  //   photo: "/images/malta.png",
-  //   route_slug: "Study in Romania",
-  //   box1: {
-  //     title: "World-Class Education",
-  //     description:
-  //       "Study in Malta for quality education, English-speaking environment, historical charm, beautiful landscapes, and Mediterranean climate.",
-  //   },
-  // },
-  // {
-  //   id: 3,
-  //   country: "Hungary",
-  //   slug: "hungary",
-  //   flag: "/images/hungary_flag.png",
-  //   photo: "/images/hungary.png",
-  //   route_slug: "Study in Hungary",
-  //   box1: {
-  //     title: "World-Class Education",
-  //     description:
-  //       "Study in Hungary for affordable tuition, quality education, vibrant culture, historic cities, and beautiful landscapes.",
-  //   },
-  // },
-  // {
-  //   id: 4,
-  //   country: "Lithuania",
-  //   slug: "hungary",
-  //   flag: "/images/lithuania_flag.png",
-  //   photo: "/images/lithuania.png",
-  //   route_slug: "Study in Lithuania",
-  //   box1: {
-  //     title: "World-Class Education",
-  //     description:
-  //       "Study in Lithuania: affordable tuition, quality education, vibrant culture, historic charm, beautiful nature, welcoming environment.",
-  //   },
-  // },
+  {
+    id: 2,
+    country: "Malta",
+    slug: "malta",
+    flag: "https://flagcdn.com/w320/mt.png",
+    photo:
+      "https://images.pexels.com/photos/17404652/pexels-photo-17404652.jpeg",
+    route_slug: "Study in Malta",
+    box1: {
+      title: "World-Class Education",
+      description:
+        "Study in Malta for a Mediterranean experience, English-speaking environment, and historic universities.",
+    },
+    countryinfo: countriesInfo["malta"],
+  },
+  {
+    id: 3,
+    country: "Hungary",
+    slug: "hungary",
+    flag: "https://flagcdn.com/w320/hu.png",
+    photo:
+      "https://images.pexels.com/photos/18815996/pexels-photo-18815996.jpeg",
+    route_slug: "Study in Hungary",
+    box1: {
+      title: "World-Class Education",
+      description:
+        "Study in Hungary for top medical and engineering programs, central location in Europe, and affordable living.",
+    },
+    countryinfo: countriesInfo["hungary"],
+  },
+  {
+    id: 4,
+    country: "Cyprus",
+    slug: "cyprus",
+    flag: "https://flagcdn.com/w320/cy.png",
+    photo:
+      "https://images.pexels.com/photos/29548810/pexels-photo-29548810.jpeg  ",
+    route_slug: "Study in Cyprus",
+    box1: {
+      title: "World-Class Education",
+      description:
+        "Study in Cyprus for quality education, English-speaking environment, historical charm, beautiful landscapes, and Mediterranean climate.",
+    },
+    countryinfo: countriesInfo["cyprus"],
+  },
+  {
+    id: 5,
+    country: "UK",
+    slug: "uk",
+    flag: "https://flagcdn.com/w320/gb.png",
+    photo:
+      "https://images.pexels.com/photos/29101507/pexels-photo-29101507.jpeg",
+    route_slug: "Study in UK",
+    box1: {
+      title: "World-Class Education",
+      description:
+        "Study in the UK for globally recognized degrees, rich academic tradition, and diverse career opportunities.",
+    },
+    countryinfo: countriesInfo["uk"],
+  },
 ];
 
 export const dummyUniversities = [
   {
     id: 1,
     name: "Spiru haret University, Romania",
-    slug: "moscow-state-university",
+    slug: "spiru-haret-university-romania",
     description:
       "Spiru Haret University, a private Romanian institution, offers diverse undergraduate and postgraduate programs with a focus on accessibility and quality education.",
     short_info: {
@@ -154,7 +421,7 @@ export const dummyUniversities = [
   {
     id: 3,
     name: "Budapest University Of Technology & Economics",
-    slug: "moscow-state-university",
+    slug: "budapest-university-of-technology-and-economics",
     description:
       "Budapest University of Technology & Economics excels in engineering, IT, and business education, fostering innovation and research in Hungary.",
     short_info: {
