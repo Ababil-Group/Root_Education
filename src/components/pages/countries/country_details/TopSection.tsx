@@ -21,14 +21,14 @@ const TopSection = ({ countryInfo }: { countryInfo: Study_Country }) => {
               for research and innovation.
             </p>
             <p className="text-sm font-medium">
-              For Bangladeshi students, {countryInfo.country} provides a
-              welcoming environment with a rich cultural heritage, vibrant
-              student life, and a lower cost of living compared to other
-              European countries. The country’s universities are known for their
-              international student support services, making the transition to a
-              new academic and social environment smoother. Scholarships are
-              also available to help offset tuition fees and living expenses,
-              making studying in
+              For all students, {countryInfo.country} provides a welcoming
+              environment with a rich cultural heritage, vibrant student life,
+              and a lower cost of living compared to other European countries.
+              The country’s universities are known for their international
+              student support services, making the transition to a new academic
+              and social environment smoother. Scholarships are also available
+              to help offset tuition fees and living expenses, making studying
+              in
               {countryInfo.country} even more accessible.
             </p>
             <p className="text-sm font-medium">
@@ -40,7 +40,7 @@ const TopSection = ({ countryInfo }: { countryInfo: Study_Country }) => {
               education can open doors to global career opportunities. Whether
               you are pursuing undergraduate, postgraduate, or doctoral studies,
               {countryInfo.country} offers a pathway to academic success and
-              personal growth for Bangladeshi students.
+              personal growth for all students.
             </p>
           </div>
           <div className="inline-flex flex-col items-start justify-start gap-x-6 gap-y-4 rounded-lg border p-8 shadow-md md:flex-row">
