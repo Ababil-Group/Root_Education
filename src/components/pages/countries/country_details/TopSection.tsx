@@ -7,7 +7,7 @@ const TopSection = ({ countryInfo }: { countryInfo: Study_Country }) => {
       <div className="container flex flex-col gap-x-20 gap-y-20 lg:flex-row">
         <div className="basis-full space-y-6 lg:basis-[60%]">
           <h2 className="text-4xl font-semibold">
-            Study in {countryInfo.country} For Bangladesh Students
+            Study in {countryInfo.country} For All Students
           </h2>
           <div className="space-y-3">
             <p className="text-sm font-medium">
