@@ -5,7 +5,7 @@ const TopBar = () => {
     <header className="bg-secondary py-2 text-xs font-medium text-white">
       <div className="container">
         <div className="mx-auto flex max-w-7xl items-center justify-center divide-x-[1px] divide-white">
-          <Link href="tel:+40123456789">
+          <Link href="tel:+447465268767">
             <div className="flex items-center justify-start gap-3 px-5">
               <div>
                 <svg
@@ -41,7 +41,7 @@ const TopBar = () => {
                   </defs>
                 </svg>
               </div>
-              <div className="hidden lg:block">+40 123 456 789</div>
+              <div className="block">+447465268767</div>
             </div>
           </Link>
 
@@ -117,7 +117,7 @@ const TopBar = () => {
                 </svg>
               </div>
               <div className="hidden lg:block">
-                UK 12-116 Whitechapel Road 2nd Floor, UK London E1 1JE
+                7 Kirkdale House, London, E11 1HP
               </div>
             </div>
           </Link>

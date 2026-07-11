@@ -52,10 +52,10 @@ const ContactUsPage = () => {
               <h6 className="text-2xl font-medium duration-200 group-hover:text-white">
                 Location
               </h6>
-              <Link href="https://maps.app.goo.gl/52W4k1TirayToasE7">
+              <Link href="https://www.google.com/maps/search/?api=1&query=7+Kirkdale+House,+London,+E11+1HP">
                 <p className="text-center text-sm font-medium group-hover:text-white">
-                  UK 12-116 Whitechapel Road 2nd
-                  <br /> Floor, UK London E1 1JE
+                  7 Kirkdale House
+                  <br /> London, E11 1HP
                 </p>
               </Link>
             </FadeInLeftWithSlowBounce>
@@ -92,11 +92,11 @@ const ContactUsPage = () => {
               <h6 className="text-2xl font-medium duration-200 group-hover:text-white">
                 Call Us
               </h6>
-              {/* <Link href="tel:+00000000">
+              <Link href="tel:+447465268767">
                 <p className="text-center text-sm font-medium group-hover:text-white">
-                  +40 123 456 789
+                  +447465268767
                 </p>
-              </Link> */}
+              </Link>
             </FadeInUpWithSlowBounce>
 
             {/* card */}
@@ -135,7 +135,7 @@ const ContactUsPage = () => {
               <div className="relative min-h-[500px] w-full basis-full md:h-auto lg:basis-1/2">
                 <iframe
                   className="min-h-full min-w-full"
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d620.703674182538!2d-0.06801056634368541!3d51.51661552134698!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48761ccae3914e6b%3A0x82fc38e9465c588!2s2nd%20Floor%2C%2010-12%20Whitechapel%20Rd%2C%20London%20E1%201EW%2C%20UK!5e0!3m2!1sen!2sbd!4v1733749627916!5m2!1sen!2sbd"
+                  src="https://www.google.com/maps?q=7+Kirkdale+House,+London,+E11+1HP&output=embed"
                   height={600}
                   style={{ border: 0 }}
                   allowFullScreen

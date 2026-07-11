@@ -193,7 +193,7 @@ const Footer = () => {
                     </defs>
                   </svg>
                 </div>
-                <div>+40 123 456 789</div> */}
+                <div>+447465268767</div> */}
               </div>
               <div className="flex items-center justify-start gap-3">
                 <div>
@@ -224,7 +224,7 @@ const Footer = () => {
                 <div className="flex items-center gap-3">
                   <MapPin className="h-6 w-6 text-white" />
                   <p className="text-white">
-                    UK 12-116 Whitechapel Road 2nd Floor, UK London E1 1JE
+                    7 Kirkdale House, London, E11 1HP
                   </p>
                 </div>
                 {/* <div className="flex items-center gap-3">
