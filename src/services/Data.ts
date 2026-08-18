@@ -308,6 +308,71 @@ export const countriesInfo = {
         "Student visa allows part-time work during term time.",
     },
   },
+  greece: {
+    about_university: [
+      {
+        title: "Overview",
+        description:
+          "Greece offers EU-recognized degrees, a rich academic heritage, and an affordable Mediterranean lifestyle.",
+      },
+      {
+        title: "History",
+        description:
+          "The National and Kapodistrian University of Athens was founded in 1837, one of the oldest in the Mediterranean.",
+      },
+    ],
+    programs: {
+      undergraduate_programs: [
+        { name: "Business Administration" },
+        { name: "Tourism and Hospitality Management" },
+      ],
+      postgraduate_programs: [
+        { name: "MSc in Shipping Management" },
+        { name: "MA in Archaeology" },
+      ],
+      doctoral_programs: [{ name: "PhD in Marine Sciences" }],
+    },
+    scholarship: {
+      short_description:
+        "Scholarships available through IKY (State Scholarships Foundation) and university funds.",
+      table: [
+        {
+          scholarship_name: "IKY State Scholarship",
+          amount: "€3,500/year",
+          eligibility_criteria: "Strong academic record",
+          provider: "State Scholarships Foundation",
+        },
+        {
+          scholarship_name: "International Student Grant",
+          amount: "€1,500",
+          eligibility_criteria: "Proven financial need",
+          provider: "University of Athens",
+        },
+      ],
+      notes: [
+        { title: "Scholarships are subject to annual academic review." },
+        { title: "Applications open each spring." },
+      ],
+    },
+    application_guide: {
+      short_description: "Apply directly through the university's admissions office.",
+      guide_list: [
+        {
+          title: "Step 1",
+          description: "Submit the online application with academic transcripts.",
+        },
+        {
+          title: "Step 2",
+          description: "Provide proof of English or Greek language proficiency.",
+        },
+        {
+          title: "Step 3",
+          description: "Attend an interview or entrance assessment (if required).",
+        },
+      ],
+      bottom_description: "Student visa processing typically takes 4-8 weeks.",
+    },
+  },
 };
 
 export const dummyCountries: Study_Country[] = [
@@ -385,6 +450,21 @@ export const dummyCountries: Study_Country[] = [
         "Study in the UK for globally recognized degrees, rich academic tradition, and diverse career opportunities.",
     },
     countryinfo: countriesInfo["uk"],
+  },
+  {
+    id: 6,
+    country: "Greece",
+    slug: "greece",
+    flag: "https://flagcdn.com/w320/gr.png",
+    photo:
+      "https://images.pexels.com/photos/1010657/pexels-photo-1010657.jpeg",
+    route_slug: "Study in Greece",
+    box1: {
+      title: "World-Class Education",
+      description:
+        "Study in Greece for EU-recognized degrees, a rich historical heritage, affordable living, and a warm Mediterranean climate.",
+    },
+    countryinfo: countriesInfo["greece"],
   },
 ];
 
